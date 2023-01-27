@@ -1,0 +1,392 @@
+/* HEADER */
+
+* {
+    margin: 0px;
+
+}
+
+body {
+    background-image: url(img/Desktop\ -\ 1.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header{ 
+    background-color: rgba(232, 232, 232, 1) ;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+header a {
+    font-family: barlow;
+    font-weight: 600;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color:rgba(41, 55, 76, 1);
+}
+
+.a_header {
+    transition: 0.3s ease;
+    text-decoration: none;
+    color:rgba(41, 55, 76, 1);
+}
+
+header a:hover{
+    color: rgba(95, 48, 249, 1);
+}
+
+.container {
+    width: 20%;
+    min-height: 50px;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgb(244, 244, 244);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 7px 16px 8px 15px;
+    
+}
+
+.search-bar input {
+    background-color:  transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 1px 10px;
+    color:rgb(58, 58, 58);
+    font-size: 14px;
+}
+
+::placeholder {
+    color:rgb(119, 119, 119);
+}
+
+#_2header {
+    background-color: rgba(216, 216, 216, 1);
+    display: flex;
+    justify-content: end;
+    padding: 0.3%;
+}
+
+._2header_p {
+    margin-right: 3%;
+    font-family: barlow;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+#_2header a:hover{
+    margin-right: 3%;
+    font-family: barlow;
+    font-weight: 500;
+    color: rgba(95, 48, 249, 1);
+}
+
+.search-bar button img {
+    width: 30px;
+}
+
+.search-bar button {
+    border: 0px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* FECHA HEADER */
+
+/* FOOTER  */
+
+.img_footer {
+    padding-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(232, 232, 232, 1) ;
+    padding-bottom: 30px;
+    padding-top: 25px;
+}
+
+.img_footer {
+    margin-right: 30px;
+    margin-top: 5px;
+}
+
+footer div {
+    width: 100%;
+    padding-left: 80px;
+    
+}
+
+#footer1 {
+    margin-left: 4%;
+}
+
+#footer3 {
+    margin-left: -7%;
+}
+
+#footer4 {
+    display: flex;
+}
+
+footer a {
+    color: rgba(41, 55, 76, 1);
+    font-family: barlow;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    color: rgba(95, 48, 249, 1);
+    font-family: barlow;
+    font-weight: 500;
+}
+
+footer p {
+    color:rgba(95, 48, 249, 1);
+    font-family: barlow;
+    font-weight: 500;
+}
+
+#footer_vem {
+    color:rgba(95, 48, 249, 1);
+    font-family: barlow;
+    font-weight: 500;
+    padding-left: 95px;
+}
+
+#tel , #horariocomercial {
+    color: rgba(41, 55, 76, 1);
+}
+
+#tel {
+    margin-left: 7%;
+    margin-top: 0.4%;
+}
+
+/* FECHA FOOTER */
+
+/* BODY INÍCIO */
+
+#plataforma {
+    width: 58%;
+}
+
+.plataforma {
+    font-family: barlow;
+    color:rgba(41, 55, 76, 1);
+    font-size: 40px;
+    margin: 50px;
+    margin-left: 150px;
+    margin-bottom: 80px;
+    margin-top: 125px;
+    width: 100%;
+}
+
+#conectando {
+    font-family: barlow;
+    color:rgba(41, 55, 76, 1);
+    margin-left: 150px;
+    width: 100%;
+    font-size: 25px;
+}
+
+#botaoinicio {
+    margin-left: 200px;
+    margin-bottom: 85px;
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 100px;
+    border: 1px white;
+    width: 35%;
+    background-color: rgba(181, 223, 15, 1); ;
+    font-family: barlow;
+    font-size: 19px;
+}
+
+.oque {
+        font-family: barlow;
+        color:rgba(41, 55, 76, 1);
+        font-size: 40px;
+        margin: 50px;
+        margin-bottom: 65px;
+        text-align: center;
+}
+
+.oquee{
+    font-family: barlow;
+    color:rgba(41, 55, 76, 1);
+    margin: 30px 150px 130px 150px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.pedido {
+    text-align: center;
+    width: 40%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pedidocel {
+    text-align: center;
+    width: 30%;
+}
+
+.pedidoorç {
+    text-align: center;
+    width: 30%;
+}
+
+.pedidosof {
+    text-align: center;
+    width: 30%;
+}
+
+#main {
+    background-color: rgb(233, 233, 233);
+    padding: 15px 10px 70px 10px;
+    margin-bottom: 100px;
+}
+
+.p_orçamento {
+    font-size: 22px;
+    font-family: barlow;
+    text-align: center;
+    color:rgba(95, 48, 249, 1);
+    margin-top: 8%;
+    margin-bottom: 7px;
+}
+
+.p_escolha {
+    font-size: 22px;
+    font-family: barlow;
+    text-align: center;
+    color:rgba(95, 48, 249, 1);
+    margin-top: 8%;
+    margin-bottom: 7px;
+}
+
+.p_faca {
+    font-size: 22px;
+    font-family: barlow;
+    text-align: center;
+    color:rgba(95, 48, 249, 1);
+    margin-top: 2%;
+    margin-bottom: 7px;
+}
+
+.p_icones {
+    font-family: barlow;
+    font-size: 18px;
+}
+
+#icone_celular {
+    margin-top: -30px;
+}
+
+/* AVALIAÇÕES */
+
+#div1_avaliacoes {
+    text-align: center;
+    font-family: barlow;
+}
+
+#avaliacao_1 {
+    display: flex;
+    width: 40%;
+    margin-left: 10%;
+    height: 250px;
+    margin-right: -8%;
+}
+
+#avaliacao_2 {
+    display: flex;
+    width: 40%;
+    margin-right: 6%;
+    height: 250px;
+}
+
+#avaliacao_3 {
+    display: flex;
+    margin-left: 90px;
+    height: 250px;
+}
+
+#avaliacao_1_1 {
+    width: 40%;
+    padding-right: 20px;
+    margin-top: -2%;
+    
+}
+
+#main_avaliacoes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+#avaliacao_1_1_p1 {
+    font-family: barlow;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+#avaliacao_1_1_p2 {
+    font-family: barlow;
+    font-size: 16px;
+    margin-left: 10%;
+    width: 73%;
+}
+
+#aspas_verdes {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -7%;
+}
+
+#aspas_verdes_img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#aspas_verdes_2 {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1%;
+}
