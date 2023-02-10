@@ -15,27 +15,48 @@
     width: 58%;
 }
 
+#main_primeira {
+    display: flex;
+    justify-content: center;
+}
+
+#section_imagens_comodos{
+    width: 85%;
+}
+
+#imagens_comodos {
+    display: flex;
+    justify-content: center;
+}
+
+#imagens_comodos2 {
+    margin-top: -9%;
+}
+
 .plataforma {
     color: var(--font-color);
     font-size: 40px;
     margin: 125px 50px 80px 150px;
     width: 100%;
 }
-
 #conectando {
     color: var(--font-color);
-    margin-left: 150px;
     width: 100%;
     font-size: 25px;
+    margin-right: 4%;
+    
 }
 
 #botaoinicio {
-    margin: 150px 0 85px 145px;
+    margin-left: 23%;
+    margin-bottom: 75px;
+    margin-top: -10%;
     padding: 20px;
     border-radius: 100px;
     border: 1px white;
-    width: 35%;
-    background-color: rgba(181, 223, 15, 1); ;
+    width: 20%;
+    background-color: rgba(198, 246, 8, 1); ;
+    font-family: barlow;
     font-size: 19px;
 }
 
@@ -46,7 +67,7 @@
 .oque {
     color: var(--font-color);
     font-size: 40px;
-    margin: 50px 50px 65px;
+    margin: 50px 50px 28px;
     text-align: center;
 }
 
@@ -190,4 +211,88 @@ nav {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 1%;
+}
+
+/* PROCESSO PROFISSIONAIS */
+
+#main_profissionais {
+    background-color: rgb(233, 233, 233);
+    padding: 15px 10px 70px 10px;
+    margin-bottom: 130px;
+    margin-top: 7%;
+}
+
+#div_processo_profissionais {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.computador_profissionais {
+    text-align: center;
+    width: 30%;
+}
+    
+.p_computador {
+    font-size: 22px;
+    font-family: barlow;
+    text-align: center;
+    color:rgba(95, 48, 249, 1);
+    margin-top: 8%;
+    margin-bottom: 10px;
+}
+
+.like_profissionais {
+    text-align: center;
+    width: 30%;
+}
+
+#imagem_like_profissionais {
+    margin-top: -5%;
+}
+
+.p_like {
+    font-size: 22px;
+    font-family: barlow;
+    text-align: center;
+    color:rgba(95, 48, 249, 1);
+    margin-top: 11%;
+    margin-bottom: 10px;
+}
+
+.pedidos_profissionais {
+    text-align: center;
+    width: 30%;
+}
+
+#img_pedidos {
+    margin-top: -4%;
+}
+
+.p_pedidos {
+    font-size: 22px;
+    font-family: barlow;
+    text-align: center;
+    color:rgba(95, 48, 249, 1);
+    margin-top: 4%;
+    margin-bottom: 7px;
+}
+
+.cifrao_profissionais {
+    text-align: center;
+    width: 30%;
+}
+
+#img_cifrao {
+    margin-top: -8%;
+}
+
+.p_cifrao {
+    font-size: 22px;
+    font-family: barlow;
+    text-align: center;
+    color:rgba(95, 48, 249, 1);
+    margin-top: 6%;
+    margin-bottom: 7px;
 }

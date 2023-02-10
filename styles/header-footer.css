@@ -118,13 +118,6 @@ header a:hover{
 
 /* FOOTER  */
 
-footer{
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-}
-
 .footer-container{
     display: flex;
     flex-direction: row;
