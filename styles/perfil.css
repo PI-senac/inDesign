@@ -98,6 +98,10 @@ h1{
     margin-top: 4rem;
 }
 
+.alterar-dados:hover{
+    cursor: pointer;
+}
+
 .estilo{
     margin: 12px 0;
     letter-spacing: .9mm;
