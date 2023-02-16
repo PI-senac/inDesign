@@ -1,3 +1,5 @@
+@import url(./header-footer.css);
+
 :root{
     --font-family: 'Barlow', sans-serif;
     --font-color: #29374C;
@@ -16,15 +18,20 @@
     justify-content: space-evenly;
     flex-wrap: nowrap;
     border: 1px solid #000;
-    margin: 90px 114px;
-    padding: 2rem 0;
+    margin: 5.6rem 20rem;
+    padding: 1rem 0;
     box-shadow: 10px 12px #C6F608;
     border-radius: 14px;
     background-color: #FFF;
+    min-height: 57vh;
+}
+
+.box1{
+    width: 15vw;
 }
 
 .box2{
-    width: 28.4375rem;
+    width: 22.4375rem;
     text-align: center;
     font-weight: 700;
     border-right: 1px solid #29374CCC;
@@ -44,7 +51,7 @@
 
 .user{
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 h2{
@@ -60,10 +67,14 @@ h2{
     margin: 1rem 0;
 }
 
-.box1 > .opcoes p{
+.box1 > .opcoes a{
     font-weight: 600;
     letter-spacing: .4mm;
     margin-left: 10px;
+}
+
+.opcoes a:hover{
+    color: var(--purple);
 }
 
 .cadeado{
