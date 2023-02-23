@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/decoracoes.css">
-    <title>Minhas decorações</title>
+    <link rel="stylesheet" href="/styles/cobranca.css">
+    <title>Meu perfil</title>
 </head>
 <body>
 <header>
@@ -36,82 +36,51 @@
             <h2 class="nome">Yuri gostoso sexo</h2>
         </div>
         <div class="opcoes">
-            <img src="/img/user avatar.svg">
+            <img src="../img/user avatar.svg">
             <a href="perfil.html">Meu perfil</a>
         </div>
         <div class="opcoes">
-            <img src="../img/mini sofa roxo.svg">
-            <a href="decoracoes.html" class="active">Minhas decorações</a>
+            <img src="/img/mini sofa.svg">
+            <a href="decoracoes.html">Minhas decorações</a>
         </div>
         <div class="opcoes">
-            <img src="/img/moeda.svg">
-            <a href="cobranca.html">Dados de cobrança</a>
+            <img src="/img/moeda roxa.svg">
+            <a href="cobranca.html" class="active">Dados de cobrança</a>
         </div>
         <div class="opcoes cadeado">
             <img src="/img/cadeado.svg">
             <a href="#">Senha e segurança</a>
         </div>
     </article>
-    <article class="box4">
-        <h1 class="titulo-decoracoes">Decorações em andamento</h1>
-        <div class="sem-decoracoes hidden">
-            <p>você ainda não possui decorações em andamento</p>
-        </div>
-        <div class="decoracoes-andamento">
-            <hr><div class="infos">
-                <h3>cômodo e estilo</h3>
-                <p>Data de início: 11/11/1111</p>
-                <p>Previsão para entrega: 22/22/2222</p>
-                <span>Decorador: </span><a href="#" class="decorador">Yuri sexy</a>
-                <p>Valor: R$888888</p>
-                <p>ID: 24344</p>
-                <div class="detalhes">
-                    <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
-                </div>
+    <article class="box6">
+        <h1>Dados de cobrança</h1>
+        <form class="form-dados">
+            <div class="input">
+                <label>CEP</label><span class="obrigatorio">*</span><br>
+                <input type="text">
             </div>
-        </div>
-        </div>
-    </article>
-    <article class="box5">
-        <h1 class="titulo-decoracoes finalizadas">Decorações finalizadas</h1>
-        <div class="no-decoracoes hidden">
-            <p>você ainda não possui decorações finalizadas</p>
-        </div>
-        <div class="decoracoes-andamento finished">
-            <hr><div class="infos-finalizada">
-                <h3>cômodo e estilo</h3>
-                <p>Data de início: 11/11/1111</p>
-                <p>Data de entrega: 22/22/2222</p>
-                <span>Decorador: </span><a href="#" class="decorador">Yuri sexy</a>
-                <p>Valor: R$888888</p>
-                <p>ID: 93248</p>
-                <div class="detalhes">
-                    <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
-                </div>
-                <div class="avaliacao">
-                    <h3>Sua avaliação:</h1>
-                    <img src="" alt="">
-                </div>
+            <div class="input">
+                <label>Estado</label><span class="obrigatorio">*</span><br>
+                <input type="text">
             </div>
-            <hr><div class="infos-finalizada">
-                <h3>cômodo e estilo</h3>
-                <p>Data de início: 11/11/1111</p>
-                <p>Data de entrega: 22/22/2222</p>
-                <span>Decorador: </span><a href="#" class="decorador">Yuri sexy</a>
-                <p>Valor: R$888888</p>
-                <p>ID: 12847</p>
-                <div class="detalhes">
-                    <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
-                </div>
-                <div class="avaliacao">
-                    <h3>Sua avaliação:</h1>
-                    <img src="" alt="">
-                </div>
+            <div class="input">
+                <label>Cidade</label><span class="obrigatorio">*</span><br>
+                <input type="text">
             </div>
-        </div>
+            <div class="input">
+                <label>Endereço</label><span class="obrigatorio">*</span><br>
+                <input type="text" class="address">
+            </div>
+            <div class="input">
+                <label>Número</label><span class="obrigatorio">*</span><br>
+                <input type="text">
+            </div>
+            <div class="input">
+                <label>Complemento</label><br>
+                <input type="text">
+            </div>
+        </form>
+        <button class="alterar-dados">Altere seus dados</button>
     </article>
 </section>
 
@@ -154,6 +123,5 @@
     </section>
 </footer>
 <script src="../js/active-header.js"></script>
-<script src="../js/sem-decoracao.js"></script>
 </body>
 </html>

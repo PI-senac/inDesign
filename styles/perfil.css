@@ -24,6 +24,7 @@
     border-radius: 14px;
     background-color: #FFF;
     min-height: 57vh;
+    overflow: hidden;
 }
 
 .box1{
@@ -37,6 +38,7 @@
     border-right: 1px solid #29374CCC;
     border-left: 1px solid #29374CCC;
     padding: 0 50px;
+    height: 52vh;
 }
 
 .box2 p{
@@ -113,5 +115,5 @@ h1{
 
 .meu-estilo{
     position: relative;
-    top: -2.5rem;
+    top: -3.1rem;
 }

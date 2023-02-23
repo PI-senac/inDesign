@@ -1,0 +1,38 @@
+@import url(../styles/header-footer.css);
+@import url(../styles/perfil.css);
+@import url(../styles/decoracoes.css);
+
+.box6{
+    width: 51.725rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: 1px solid #29374CCC;
+    height: 52vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.obrigatorio{
+    color: var(--purple);
+}
+
+.form-dados{
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0 3rem;
+}
+
+.address{
+    width: 300px;
+}
+
+.input input{
+    padding: .5rem;
+    border-radius: 8px;
+    border: 1px solid #29374CCC;
+}
