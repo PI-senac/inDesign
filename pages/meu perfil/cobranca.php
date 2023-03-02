@@ -1,3 +1,24 @@
+<?php
+if(isset($_POST['alterar'])){
+    include_once('conexao.php');
+    $cep= $_POST['cep'];
+    $estado= $_POST['estado'];
+    $cidade= $_POST['cidade'];
+    $rua = $_POST['logradouro'];
+    $numero = $_POST['numero'];
+    $complemento = $_POST['complemento'];
+
+    $sql= "INSERT INTO cadastro(cep, estado, cidade, endereço, numero, complemento) VALUES ('$cep', '$estado', '$cidade', '$rua', '$numero', '$complemento')";
+    $query= mysqli_query($conexao, $sql);
+
+    if($query){
+        echo "<script>
+        location.replace('perfil.html');
+        </script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -54,33 +75,33 @@
     </article>
     <article class="box6">
         <h1>Dados de cobrança</h1>
-        <form class="form-dados">
+        <form class="form-dados" method="post">
             <div class="input">
                 <label>CEP</label><span class="obrigatorio">*</span><br>
-                <input type="text" class="formulario cep" disabled required>
+                <input type="text" name="cep" class="formulario cep" disabled required>
             </div>
             <div class="input">
                 <label>Estado</label><span class="obrigatorio">*</span><br>
-                <input type="text" class="estado" disabled>
+                <input type="text" name="estado" class="estado" disabled>
             </div>
             <div class="input">
                 <label>Cidade</label><span class="obrigatorio">*</span><br>
-                <input type="text" class="cidade" disabled>
+                <input type="text" name="cidade" class="cidade" disabled>
             </div>
             <div class="input">
                 <label>Endereço</label><span class="obrigatorio">*</span><br>
-                <input type="text" class="address" disabled>
+                <input type="text" name="logradouro" class="address" disabled>
             </div>
             <div class="input">
                 <label>Número</label><span class="obrigatorio">*</span><br>
-                <input type="number" class="formulario house-number" required disabled>
+                <input type="number" name="numero" class="formulario house-number" required disabled>
             </div>
             <div class="input">
                 <label>Complemento</label><br>
-                <input type="text" class="formulario complemento" disabled>
+                <input type="text" name="complemento" class="formulario complemento" disabled>
             </div>
         </form>
-        <button class="alterar-dados">Altere seus dados</button>
+        <button class="alterar-dados" name="alterar">Altere seus dados</button>
     </article>
 </section>
 
