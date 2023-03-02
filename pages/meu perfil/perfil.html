@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/header-footer.css">
     <link rel="stylesheet" href="/styles/perfil.css">
     <title>Meu perfil</title>
 </head>
 <body>
 <header>
     <img src="/img/Wireframe PI 1.png" width="20%">
-    <a class="a_header" href="/pages/index.html">Início</a>
+    <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="#">Sobre</a>
-    <a class="a_header" href="/pages/perfil.html">Perfil</a>
+    <a class="a_header active" href="../meu perfil/perfil.html">Perfil</a>
     <a class="a_header" href="#">Quiz</a>
     <div class="container">
         <form action="" class="search-bar">
@@ -37,20 +36,20 @@
             <h2 class="nome">Yuri gostoso sexo</h2>
         </div>
         <div class="opcoes">
-            <img src="/img/user avatar.svg">
-            <p>Meu perfil</p>
+            <img src="../../img/user avatar roxo.svg">
+            <a href="./perfil.html" class="active">Meu perfil</a>
         </div>
         <div class="opcoes">
             <img src="/img/mini sofa.svg">
-            <p>Minhas decorações</p>
+            <a href="./decoracoes.html">Minhas decorações</a>
         </div>
         <div class="opcoes">
             <img src="/img/moeda.svg">
-            <p>Dados de cobrança</p>
+            <a href="./cobranca.html">Dados de cobrança</a>
         </div>
         <div class="opcoes cadeado">
             <img src="/img/cadeado.svg">
-            <p>Senha e segurança</p>
+            <a href="./seguranca.html">Senha e segurança</a>
         </div>
     </article>
     <article class="box2">
@@ -120,5 +119,7 @@
         </article>
     </section>
 </footer>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="/js/active-header.js"></script>
 </body>
 </html>
