@@ -5,6 +5,7 @@
     --font-color: #29374C;
     --purple: #5f30f9;
     --bg-color: #e8e8e8;
+    --transparent-blue: #29374CCC;
 }
 
 *{
@@ -35,8 +36,8 @@
     width: 22.4375rem;
     text-align: center;
     font-weight: 700;
-    border-right: 1px solid #29374CCC;
-    border-left: 1px solid #29374CCC;
+    border-right: 1px solid var(--transparent-blue);
+    border-left: 1px solid var(--transparent-blue);
     padding: 0 50px;
     height: 52vh;
 }
@@ -58,7 +59,7 @@
 
 h2{
     font-weight: 700;
-    color: #29374CCC;
+    color: var(--transparent-blue);
     margin-top: 20px;
     font-size: 20px;
 }

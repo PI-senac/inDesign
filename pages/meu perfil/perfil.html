@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/cobranca.css">
+    <link rel="stylesheet" href="/styles/perfil.css">
     <title>Meu perfil</title>
 </head>
 <body>
 <header>
     <img src="/img/Wireframe PI 1.png" width="20%">
-    <a class="a_header" href="/pages/index.html">Início</a>
+    <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="#">Sobre</a>
-    <a class="a_header active" href="/pages/perfil.html">Perfil</a>
+    <a class="a_header active" href="../meu perfil/perfil.html">Perfil</a>
     <a class="a_header" href="#">Quiz</a>
     <div class="container">
         <form action="" class="search-bar">
@@ -36,51 +36,48 @@
             <h2 class="nome">Yuri gostoso sexo</h2>
         </div>
         <div class="opcoes">
-            <img src="../img/user avatar.svg">
-            <a href="perfil.html">Meu perfil</a>
+            <img src="../../img/user avatar roxo.svg">
+            <a href="./perfil.html" class="active">Meu perfil</a>
         </div>
         <div class="opcoes">
             <img src="/img/mini sofa.svg">
-            <a href="decoracoes.html">Minhas decorações</a>
+            <a href="./decoracoes.html">Minhas decorações</a>
         </div>
         <div class="opcoes">
-            <img src="/img/moeda roxa.svg">
-            <a href="cobranca.html" class="active">Dados de cobrança</a>
+            <img src="/img/moeda.svg">
+            <a href="./cobranca.html">Dados de cobrança</a>
         </div>
         <div class="opcoes cadeado">
             <img src="/img/cadeado.svg">
-            <a href="#">Senha e segurança</a>
+            <a href="./seguranca.html">Senha e segurança</a>
         </div>
     </article>
-    <article class="box6">
-        <h1>Dados de cobrança</h1>
-        <form class="form-dados">
-            <div class="input">
-                <label>CEP</label><span class="obrigatorio">*</span><br>
-                <input type="text">
-            </div>
-            <div class="input">
-                <label>Estado</label><span class="obrigatorio">*</span><br>
-                <input type="text">
-            </div>
-            <div class="input">
-                <label>Cidade</label><span class="obrigatorio">*</span><br>
-                <input type="text">
-            </div>
-            <div class="input">
-                <label>Endereço</label><span class="obrigatorio">*</span><br>
-                <input type="text" class="address">
-            </div>
-            <div class="input">
-                <label>Número</label><span class="obrigatorio">*</span><br>
-                <input type="text">
-            </div>
-            <div class="input">
-                <label>Complemento</label><br>
-                <input type="text">
-            </div>
-        </form>
+    <article class="box2">
+        <h1 class="meu-perfil">Meu perfil</h1>
+        <div class="opcoes cadeado">
+            <img src="/img/cpf icon.svg">
+            <p>123.456.789-12</p>
+        </div><hr>
+        <div class="opcoes">
+            <img src="/img/bolo.svg">
+            <p>11 de Setembro de 2004</p>
+        </div><hr>
+        <div class="opcoes">
+            <img src="/img/email.svg">
+            <p>yuriquerido@gmail.com</p>
+        </div><hr>
+        <div class="opcoes">
+            <img src="/img/celular.svg" class="celular">
+            <p>(41) 99869-8645</p>
+        </div><hr>
         <button class="alterar-dados">Altere seus dados</button>
+    </article>
+    <article class="box3">
+        <h1 class="meu-estilo">Meu estilo</h1>
+        <img src="/img/default_pfp.png">
+        <h1 class="estilo">estilo</h1>
+        <p>Não é preciso estar no campo para poder adicionar um toque rústico ao décor da casa. A seleção de ambientes abaixo prova que o estilo, se bem dosado, é capaz de trazer aconchego a qualquer espaço. A dica é combinar elementos de toque natural ou estruturas expostas com peças ou revestimentos de estética oposta, criando, assim, um contraste interessante para a madeira na decoração.
+        </p>
     </article>
 </section>
 
@@ -122,6 +119,7 @@
         </article>
     </section>
 </footer>
-<script src="../js/active-header.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="/js/active-header.js"></script>
 </body>
 </html>
