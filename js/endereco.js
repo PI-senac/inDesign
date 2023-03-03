@@ -6,8 +6,22 @@ botao.addEventListener('click', () => {
     inputs.forEach((inputs) => {
         inputs.disabled = false;
     });
+});
 
-    botao.textContent = 'Salvar alterações'
+$('#edit').click(function() {
+    $(this).hide();
+    $('#save, #cancel').show();
+});
+
+$('#cancel').click(function() {
+    $('#edit').show();
+    $('#save, #cancel').hide();
+});
+
+$('#save').click(function() {
+    $(this).hide();
+    $('#cancel').hide();
+    $('#edit').show();
 });
 
 ceeep.addEventListener("keypress", (e) => {

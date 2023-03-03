@@ -37,3 +37,7 @@
     border: 1px solid var(--transparent-blue);
     outline-color: var(--purple);
 }
+
+.salvar-dados, .cancelar-dados{
+    display: none;
+}

@@ -25,7 +25,7 @@ if(isset($_POST['alterar'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/cobranca.css">
+    <link rel="stylesheet" href="/inDesign/styles/cobranca.css">
     <title>Meu perfil</title>
 </head>
 <body>
@@ -100,8 +100,10 @@ if(isset($_POST['alterar'])){
                 <label>Complemento</label><br>
                 <input type="text" name="complemento" class="formulario complemento" disabled>
             </div>
+            <button type="button" class="alterar-dados" value="edit" id="edit">Alterar endereço</button>
+            <button type="submit" class="salvar-dados" value="save" id="save" >Salvar</button>
+            <button type="button" class="cancelar-dados" value="cancel" id="cancel" >Cancelar</button>
         </form>
-        <button class="alterar-dados" name="alterar">Altere seus dados</button>
     </article>
 </section>
 
@@ -143,8 +145,8 @@ if(isset($_POST['alterar'])){
         </article>
     </section>
 </footer>
-<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="/js/active-header.js"></script>
-<script src="/js/endereco.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/inDesign/js/active-header.js"></script>
+<script src="/inDesign/js/endereco.js"></script>
 </body>
 </html>
