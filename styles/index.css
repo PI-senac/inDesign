@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;600&display=swap');
 @import url(./header-footer.css);
 
-:root{
-    --font-family: 'Barlow', sans-serif;
-    --font-color: rgba(41, 55, 76, 1);
-    --purple: rgba(95, 48, 249, 1);
-    --bg-color: rgba(232, 232, 232, 1);
-}
-
-
-
 /* BODY INÍCIO */
 
 #plataforma {
@@ -56,8 +47,7 @@
     border-radius: 100px;
     border: 1px white;
     width: 20%;
-    background-color: rgba(198, 246, 8, 1); ;
-    font-family: barlow;
+    background-color: rgba(198, 246, 8, 1);
     font-size: 19px;
 }
 

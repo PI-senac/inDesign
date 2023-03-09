@@ -1,3 +1,5 @@
+@import url(header-footer.css);
+
 #div_objetivo_sobre {
     display: flex;
     width: 100%;

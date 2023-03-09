@@ -87,7 +87,7 @@ header a:hover{
     color:rgb(119, 119, 119);
 }
 
-#_2header {
+.header-login {
     background-color: rgba(216, 216, 216, 1);
     display: flex;
     justify-content: end;
@@ -100,7 +100,7 @@ header a:hover{
     transition: 0.3s ease;
 }
 
-#_2header a:hover{
+._2header_p:hover{
     margin-right: 3%;
     font-weight: 500;
     color: var(--purple);
