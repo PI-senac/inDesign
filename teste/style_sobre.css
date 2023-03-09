@@ -1,0 +1,82 @@
+#div_objetivo_sobre {
+    display: flex;
+    width: 100%;
+    background-color: #C6F608;
+    margin-top: 100px;
+}
+
+#div_nos_somos {
+    width: 100%;
+    margin-top: 80px;
+    justify-content: center;
+    display: flex;
+}
+
+#p_nos_somos {
+    font-size: 25px;
+    width: 60%;
+}
+
+#p_div_objetivo_sobre {
+    font-size: 20px;
+    width: 60%;
+    height: 220px;
+    padding: 50px;
+    display: flex;
+    text-align: justify;
+}
+
+#div_objetivo_sobre {
+    justify-content: center;
+}
+
+#tag_imagem_sobre {
+    height: 400px;
+    margin-top: -90px;
+    width: 50%;
+    margin-left: 100px;
+}
+
+/*HOJE JA SOMOS ->*/
+
+#div_hoje_ja_somos {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+#tag_imagem_ja_somos {
+    margin-top: -97px;
+    width: 50%;
+    margin-right: 100px;
+}
+
+/* LOGO -> */
+
+#div_logo_sobre {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 90px;
+}
+
+#div2_logo_sobre {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#p_div_logo_sobre {
+    
+        font-size: 20px;
+        width: 60%;
+        padding-top: 55px;
+        display: flex;
+        text-align: justify;
+}
+
+#logo {
+    justify-content: start;
+    display: flex;
+}
