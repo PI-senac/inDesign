@@ -15,5 +15,4 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
     $cad_usuario->bindParam(':senha', $dados['senha']);
 
     $cad_usuario->execute();
-
 ?>

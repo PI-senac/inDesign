@@ -46,38 +46,43 @@
 
     </div>
 
-<form id="cadastro-container">
+<form method="POST" id="cadastro-container">
     <p class="titulo_cadastro_cadastro">Cadastre-se</p>
     <div class="cadastro_form1">
         <div class="inputs">
             <label for="nome">Nome completo<span>*</span>:</label><br>
             <input id="nome" name="nome" type="text" size="20px"><br>
-            <span class="alerta"></span>
+            <span class="alerta-nome"></span>
         </div>
 
         <div class="inputs">
             <label for="cpf">CPF<span>*</span>:</label><br>
             <input id="cpf" name="cpf" type="text" size="10px">
+            <span class="alerta-cpf"></span>
         </div>
 
         <div class="inputs">
             <label for="email">E-mail<span>*</span>: </label><br>
             <input id="email" name="email" type="text" size="25px">
+            <span class="alerta-email"></span>
         </div>
 
         <div class="inputs">
             <label for="nascimento">Data de Nascimento<span>*</span>: </label><br>
             <input id="nascimento" name="nascimento" type="date" id="data_nascimento_input">
+            <span class="alerta-nascimento"></span>
         </div>
         
         <div class="inputs">
             <label for="telefone">Telefone Celular<span>*</span>:</label><br>
             <input id="telefone" name="telefone" type="text">
+            <span class="alerta-tel"></span>
         </div>
         
         <div class="inputs">
             <label for="senha">Senha<span>*</span>: </label><br>
             <input id="senha" name="senha" type="password" size="15px">
+            <span class="alerta-pswd"></span>
         </div>
 
         <div class="inputs">
