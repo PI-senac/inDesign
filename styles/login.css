@@ -54,7 +54,7 @@
     text-align: center;
     padding: 10px;
     padding-top: 8px;
-    border-radius: 8px;
+    border-radius: 5px;
     color: #29374C;
     font-size: 18px;
     font-weight: 500;
@@ -77,68 +77,65 @@
 /* CADASTRO */
 
 #cadastro-container {
-    justify-content: center;
-    
+    overflow: hidden;
     border: 1px solid #000;
-    box-shadow: 10px 12px #C6F608;
+    box-shadow: 10px 12px var(--purple);
     border-radius: 14px;
     background-color: #FFF;
     width: 37%;
 }
 
-#cadastro-container2 {
-    justify-content: center;
-    display: flex;
-}
-
 .cadastro_form1 {
-    margin-bottom: 1%;
-    font-size: 20px;
-    border-radius: 50px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 1rem;
 }
 
 .cadastro_form1 input {
-    height: 25px;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 16px;
     margin-right: 20px;
+    padding: .3rem .5rem;
+    border: 1px solid var(--font-color);
+    border-radius: 8px;
+    outline-color: var(--purple);
 }
 
-#data_nascimento_input {
-    height: 27px;
-    font-size: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
+.cadastro_form1 span{
+    color: var(--purple);
+    font-size: 14px;
 }
 
 .titulo_cadastro_cadastro {
     font-size: 27px;
     text-align: center;
-    margin-top: 8%;
+    margin: 8% 0 4% 0;
     font-weight: 500;
-    margin-bottom: 4%;
+    color: var(--font-color);
 }
 
-#div_botao_cadastrar {
-    display: flex;
-    justify-content: center;
-}
-
-#botao_cadastro {
-    background-color: #C6F608;
-    width: 29%;
+.botao{
+    margin-top: 1rem;
     text-align: center;
-    padding: 10px;
-    padding-top: 8px;
-    border-radius: 8px;
-    color: #29374C;
+}
+
+.botao-cadastro {
+    background-color: var(--purple);
+    width: 30%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: #E8E8E8;
     font-size: 18px;
     font-weight: 500;
     transition: 0.3s ease;
+    border: none;
 }
 
-#botao_cadastro:hover {
-   background-color: #E8E8E8;
+.botao-cadastro:hover {
+   background-color: #C6F608;
+   color: var(--font-color);
 }
 
 
