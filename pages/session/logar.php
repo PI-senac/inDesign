@@ -9,24 +9,24 @@
         
         if($query->rowCount()){
             $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
-            $conexao = new mysqli('localhost', 'root', '', 'teste_indesign');
+            $conexao = new mysqli('localhost', 'root', '', 'cadastro');
             
             session_start();
-            $_SESSION['usuario'] = array($user['nome'], $user['decorador']);
+            $_SESSION['usuario'] = array($user['nome'], $user['cpf'], $user['nascimento'], $user['email'], $user['telefone']);
             $consultaId =  "SELECT decorador FROM users where email = '$email'";
             $result = $conexao->query($consultaId);
             $row = mysqli_fetch_array($result);
             $aaa = $row[0] +0;
             
             if($aaa == 1){
-/*                 var_dump($row);
+                /*                 var_dump($row);
                 echo 'if'; */
                 header("location: ../área decorador/index.php");
             }else{
 /*                 var_dump($row);
                 echo 'else'; */
                // var_dump($consultaId);
-                header("location: ../meu perfil/index.php");
+               header("location: ../meu perfil/index.php");
             }
 
         }else{

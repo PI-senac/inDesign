@@ -21,12 +21,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/inDesign/styles/decorador.css">
+    <link rel="stylesheet" href="/inDesign/styles/perfil.css">
     <title>Meu perfil</title>
 </head>
 <body>
 <header>
-    <img src="/inDesign/img/Wireframe PI 1.png" width="20%">
+    <img src="/img/Wireframe PI 1.png" width="20%">
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
@@ -35,7 +35,7 @@
     <div class="container">
         <form action="" class="search-bar">
             <input type="text" placeholder="Pesquise aqui" name="q">
-            <button type="submit"><img src="/inDesign/img/lupa.png"></button>
+            <button type="submit"><img src="/img/lupa.png"></button>
         </form>
     </div>
 </header>
@@ -53,12 +53,12 @@
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes cadeado">
-            <img src="/inDesign/img/mala roxa.svg">
-            <a href="./index.php" class="active">Área do decorador</a>
+            <img src="/inDesign/img/mala.svg">
+            <a href="./index.php">Área do decorador</a>
         </div>
         <div class="opcoes">
-            <img src="../../img/user avatar.svg">
-            <a href="./perfil.php">Meu perfil</a>
+            <img src="../../img/user avatar roxo.svg">
+            <a href="./perfil.php" class="active">Meu perfil</a>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/mini sofa.svg">
@@ -76,31 +76,32 @@
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
         </div>
     </article>
-    <article class="box6">
-        <h1 class="meu-perfil">Área do decorador</h1><hr>
-        <h2 class="subtexto">Olá, Decorador inDesign! Nessa área, você localiza as principais informações para a utilização da nossa ferramenta.</h2><hr>
-        <div class="area-decorador">
-            <div class="opcoes-decorador">
-                <h3>Novo projeto</h3>
-                <span>Inicie um novo projeto de decoração</span>
-                <a class="botao-decorador" href="">Novo projeto</a>
-            </div>
-            <div class="opcoes-decorador">
-                <h3>Minhas decorações</h3>
-                <span>Inicie um novo projeto de decoração</span>
-                <a class="botao-decorador" href="">Novo projeto</a>
-            </div>
-            <div class="opcoes-decorador">
-                <h3>Redefinir senha</h3>
-                <span>Inicie um novo projeto de decoração</span>
-                <a class="botao-decorador" href="">Novo projeto</a>
-            </div>
-            <div class="opcoes-decorador">
-                <h3>Ajuda</h3>
-                <span>Inicie um novo projeto de decoração</span>
-                <a class="botao-decorador" href="">Novo projeto</a>
-            </div>
-        </div>
+    <article class="box2">
+        <h1 class="meu-perfil">Meu perfil</h1>
+        <div class="opcoes cadeado">
+            <img src="/inDesign/img/cpf icon.svg">
+            <p><?php echo $cpf; ?></p>
+        </div><hr>
+        <div class="opcoes">
+            <img src="/inDesign/img/bolo.svg">
+            <p><?php echo $nasc; ?></p>
+        </div><hr>
+        <div class="opcoes">
+            <img src="/inDesign/img/email.svg">
+            <p><?php echo $email; ?></p>
+        </div><hr>
+        <div class="opcoes">
+            <img src="/inDesign/img/celular.svg" class="celular">
+            <p><?php echo $telefone; ?></p>
+        </div><hr>
+        <button class="alterar-dados">Altere seus dados</button>
+    </article>
+    <article class="box3">
+        <h1 class="meu-estilo">Meu estilo</h1>
+        <img src="/inDesign/img/default_pfp.png">
+        <h1 class="estilo">estilo</h1>
+        <p>Não é preciso estar no campo para poder adicionar um toque rústico ao décor da casa. A seleção de ambientes abaixo prova que o estilo, se bem dosado, é capaz de trazer aconchego a qualquer espaço. A dica é combinar elementos de toque natural ou estruturas expostas com peças ou revestimentos de estética oposta, criando, assim, um contraste interessante para a madeira na decoração.
+        </p>
     </article>
 </section>
 

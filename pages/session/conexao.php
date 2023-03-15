@@ -2,7 +2,7 @@
     $host = "localhost";
     $user = "root";
     $password = "";
-    $db = "teste_indesign";
+    $db = "cadastro";
 
     try{
         $conn = new PDO("mysql:host=$host;dbname=" . $db, $user, $password);
