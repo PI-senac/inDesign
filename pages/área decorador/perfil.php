@@ -26,7 +26,7 @@
 </head>
 <body>
 <header>
-    <img src="/img/Wireframe PI 1.png" width="20%">
+    <img src="/inDesign/img/Wireframe PI 1.png" width="20%">
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
@@ -35,7 +35,7 @@
     <div class="container">
         <form action="" class="search-bar">
             <input type="text" placeholder="Pesquise aqui" name="q">
-            <button type="submit"><img src="/img/lupa.png"></button>
+            <button type="submit"><img src="/inDesign/img/lupa.png"></button>
         </form>
     </div>
 </header>
@@ -62,15 +62,11 @@
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/mini sofa.svg">
-            <a href="./decoracoes.html">Minhas decorações</a>
+            <a href="./decoracoes.php">Minhas decorações</a>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/moeda.svg">
-            <a href="./cobranca.html">Dados de cobrança</a>
-        </div>
-        <div class="opcoes cadeado">
-            <img src="/inDesign/img/cadeado.svg">
-            <a href="./seguranca.html">Senha e segurança</a>
+            <a href="./recebimento.php">Dados de recebimento</a>
         </div>
         <div class="cadeado" style="margin-top: 2rem;">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>

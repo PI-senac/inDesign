@@ -21,8 +21,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/inDesign/styles/decorador.css">
-    <title>Meu perfil</title>
+    <link rel="stylesheet" href="/inDesign/styles/decoracoes.css">
+    <title>Minhas decorações</title>
 </head>
 <body>
 <header>
@@ -30,7 +30,7 @@
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
-    <a class="a_header active" href="./index.php">Perfil</a>
+    <a class="a_header active" href="./decoracoes.php">Perfil</a>
     <a class="a_header" href="#">Quiz</a>
     <div class="container">
         <form action="" class="search-bar">
@@ -53,11 +53,11 @@
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes cadeado">
-            <img src="/inDesign/img/mala roxa.svg">
-            <a href="./index.php" class="active">Área do decorador</a>
+            <img src="/inDesign/img/mala.svg">
+            <a href="./index.php">Área do decorador</a>
         </div>
         <div class="opcoes">
-            <img src="../../img/user avatar.svg">
+            <img src="/inDesign/img/user avatar.svg">
             <a href="./perfil.php">Meu perfil</a>
         </div>
         <div class="opcoes">
@@ -65,8 +65,8 @@
             <a href="./decoracoes.php">Minhas decorações</a>
         </div>
         <div class="opcoes">
-            <img src="/inDesign/img/moeda.svg">
-            <a href="./recebimento.php">Dados de recebimento</a>
+            <img src="/inDesign/img/moeda roxa.svg">
+            <a href="./recebimento.php" class="active">Dados de recebimento</a>
         </div>
         <div class="cadeado" style="margin-top: 2rem;">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
@@ -74,31 +74,12 @@
     </article>
     <article class="box6">
         <div class="titulos-decorador">
-            <h1 class="h1-decorador">Área do decorador</h1>
-            <h2 class="subtexto">Olá, Decorador inDesign! Nessa área, você localiza as principais informações para a utilização da nossa ferramenta.</h2>
+            <h1 class="h1-decorador">Dados de recebimento</h1>
             <hr>
+            <h2 class="subtexto">Seus dados de recebimento:</h2>
         </div>
-        <div class="area-decorador">
-            <div class="opcoes-decorador">
-                <h3>Novo projeto</h3>
-                <span>Inicie um novo projeto de decoração</span>
-                <a class="botao-decorador" href="">Novo projeto</a>
-            </div>
-            <div class="opcoes-decorador">
-                <h3>Minhas decorações</h3>
-                <span>Confira suas decorações, finalizadas ou não.</span>
-                <a class="botao-decorador" href="">Minhas decorações</a>
-            </div>
-            <div class="opcoes-decorador">
-                <h3>Redefinir senha</h3>
-                <span>Precisa trocar sua senha?</span>
-                <a class="botao-decorador" href="">Solicitar redefinição</a>
-            </div>
-            <div class="opcoes-decorador">
-                <h3>Ajuda</h3>
-                <span>Entre em contato conosco!</span>
-                <a class="botao-decorador" href="">Suporte inDesign</a>
-            </div>
+        <div class="dados-recebimento">
+            
         </div>
     </article>
 </section>
@@ -125,16 +106,16 @@
         <article class="side">
             <h2>Vem com a gente!</h2>
             <div class="icons">
-                <a href="https://br.pinterest.com/" target="_blank"><img class="img_footer" src="/inDesign/img/pin.png"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img class="img_footer" src="/inDesign/img/instagram.png"></a>
-                <a href="https://pt-br.facebook.com/" target="_blank"><img class="img_footer" src="/inDesign/img/face.png"></a>
+                <a href="https://br.pinterest.com/" target="_blank"><img class="img_footer" src="/img/pin.png"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img class="img_footer" src="/img/instagram.png"></a>
+                <a href="https://pt-br.facebook.com/" target="_blank"><img class="img_footer" src="/img/face.png"></a>
             </div>
         </article>
 
         <article class="side">
             <h2>Precisa de ajuda?</h2>
             <div class="img-span">
-                <img class="zap" src="/inDesign/img/logo_whats.png" width="18%">
+                <img class="zap" src="/img/logo_whats.png" width="18%">
                 <span class="whats">(41)98736-9496</span>
             </div>
             <p class="horario">Disponível em horário comercial</p>
@@ -142,6 +123,7 @@
     </section>
 </footer>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="/inDesign/js/active-header.js"></script>
+<script src="/js/active-header.js"></script>
+<script src="/js/sem-decoracao.js"></script>
 </body>
 </html>
