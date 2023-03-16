@@ -1,0 +1,127 @@
+@import url(header-footer.css);
+
+/* ABRE BODY TACI*/
+
+body{
+    background-image: url(img/Desktop\ -\ 1.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* Nessa área fica o css do section */
+
+.container-decorador{
+    border: 2px solid;
+    display: inline-flex;
+    padding-top: 2%;
+    padding-bottom: 50px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: 22%; 
+    margin-right: 25%;
+}
+
+#bordas_prof{
+    border-radius: 14px;
+    box-shadow: 10px 10px 5px 5px #C6F608;
+}
+
+.div1{
+    width: 300px;
+    margin-right: 50px;
+    display: flex;
+    justify-items:baseline ;
+}
+
+.sustentacao{
+    margin-top: 19%;
+}
+
+#ada{
+    height: 100px;
+    margin-left: 45%;
+    border-radius: 50%;
+}
+
+#paragrafo_estilo6{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.paragrafo_estilo7{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    padding-right: 25px;
+}
+
+/* Aqui fica o css dp botão */
+
+#botao_estilo{
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background: #C6F608;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#titulo_estilo3{
+    font-size: 10px;
+}
+
+/* Aqui fica o css do carrossel */
+
+.div2{
+    padding: 20px;
+    padding-top: 45px;
+    padding-left: 30px;
+    padding-right: 60px;
+    padding-bottom: 40px;
+    margin: 20px;
+}
+
+
+
+.galeria{
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    border: 5px solid;
+    overflow: hidden;
+}
+
+.galeria .fotos-carrossel{
+    width: 500%;
+    animation-name: animação;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.galeria .fotos-carrossel img{
+    width: 19.9%;
+}
+
+@keyframes animação{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+    100%{margin-left: -40%0;}
+}
+
+/* FECHA BODY TACI*/ 
