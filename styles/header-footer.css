@@ -28,10 +28,6 @@ header{
     align-items: center;
 }
 
-header a {
-    font-weight: 600;
-}
-
 .header {
     display: flex;
     justify-content: center;
@@ -45,7 +41,7 @@ header a {
 }
 
 .active{
-    color:#5f30f9;
+    color: var(--purple);
 }
 
 header a:hover{
@@ -95,14 +91,13 @@ header a:hover{
 }
 
 ._2header_p {
+    color: var(--font-color);
     margin-right: 3%;
-    font-weight: 500;
     transition: 0.3s ease;
 }
 
 ._2header_p:hover{
     margin-right: 3%;
-    font-weight: 500;
     color: var(--purple);
 }
 

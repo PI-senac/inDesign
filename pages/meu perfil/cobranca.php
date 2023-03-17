@@ -1,17 +1,27 @@
 <?php
-    require '../session/conexao.php';
+    require_once '../session/conexao.php';
     
     session_start();
     
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
-        require '../session/conexao.php';
         $nome = $_SESSION['usuario'][0];
-        $cpf = $_SESSION['usuario'][1];
-        $nasc = $_SESSION['usuario'][2];
-        $email = $_SESSION['usuario'][3];
-        $telefone = $_SESSION['usuario'][4];
+        $cep = $_SESSION['usuario'][5];
+        $estado = $_SESSION['usuario'][6];
+        $cidade = $_SESSION['usuario'][7];
+        $endereco = $_SESSION['usuario'][8];
+        $numero = $_SESSION['usuario'][9];
+        $complemento = $_SESSION['usuario'][10];
     }else{
         header("location: ../session/login.php");
+    }
+
+    if(!empty($_GET['id'])){
+    $id = $_GET['id'];
+
+    $select = "SELECT * FROM users WHERE id=$id";
+    $result = $conn->query($select);
+
+    var_dump($result);
     }
 ?>
 
@@ -21,7 +31,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/inDesign/styles/perfil.css">
+    <link rel="stylesheet" href="/inDesign/styles/cobranca.css">
     <title>Meu perfil</title>
 </head>
 <body>
@@ -30,7 +40,7 @@
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
-    <a class="a_header active" href="./index.php">Perfil</a>
+    <a class="a_header active" href="./cobranca.php">Perfil</a>
     <a class="a_header" href="#">Quiz</a>
     <div class="container">
         <form action="" class="search-bar">
@@ -46,52 +56,39 @@
             <img class="default-pfp" src="/inDesign/img/default_pfp.png">
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
-        <div class="opcoes cadeado">
-            <img src="/inDesign/img/mala.svg">
-            <a href="./index.php">Área do decorador</a>
-        </div>
         <div class="opcoes">
-            <img src="/inDesign/img/user avatar roxo.svg">
-            <a href="./perfil.php" class="active">Meu perfil</a>
+            <img src="/inDesign/img/user avatar.svg">
+            <a href="./index.php">Meu perfil</a>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/mini sofa.svg">
             <a href="./decoracoes.php">Minhas decorações</a>
         </div>
         <div class="opcoes">
-            <img src="/inDesign/img/moeda.svg">
-            <a href="./recebimento.php">Dados de recebimento</a>
+            <img src="/inDesign/img/moeda roxa.svg">
+            <a href="./cobranca.php" class="active">Dados de cobrança</a>
         </div>
-        <div class="cadeado" style="margin-top: 2rem;">
+        <div class="opcoes cadeado">
+            <img src="/inDesign/img/cadeado.svg">
+            <a href="./seguranca.php">Senha e segurança</a>
+        </div>
+        <div class="opcoes">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
         </div>
     </article>
-    <article class="box2">
-        <h1 class="meu-perfil">Meu perfil</h1>
-        <div class="opcoes cadeado">
-            <img src="/inDesign/img/cpf icon.svg">
-            <p><?php echo $cpf; ?></p>
-        </div><hr>
-        <div class="opcoes">
-            <img src="/inDesign/img/bolo.svg">
-            <p><?php echo $nasc; ?></p>
-        </div><hr>
-        <div class="opcoes">
-            <img src="/inDesign/img/email.svg">
-            <p><?php echo $email; ?></p>
-        </div><hr>
-        <div class="opcoes">
-            <img src="/inDesign/img/celular.svg" class="celular">
-            <p><?php echo $telefone; ?></p>
-        </div><hr>
-        <button class="alterar-dados">Altere seus dados</button>
-    </article>
-    <article class="box3">
-        <h1 class="meu-estilo">Meu estilo</h1>
-        <img src="/inDesign/img/default_pfp.png">
-        <h1 class="estilo">estilo</h1>
-        <p>Não é preciso estar no campo para poder adicionar um toque rústico ao décor da casa. A seleção de ambientes abaixo prova que o estilo, se bem dosado, é capaz de trazer aconchego a qualquer espaço. A dica é combinar elementos de toque natural ou estruturas expostas com peças ou revestimentos de estética oposta, criando, assim, um contraste interessante para a madeira na decoração.
-        </p>
+    <article class="box6">
+        <h1>Dados de cobrança</h1>
+            <div class="enderecos">
+                <p>Endereço:</p><span><?php echo $endereco; ?></span>
+                <p>Número:</p><span><?php echo $numero; ?></span>
+                <p>CEP:</p><span><?php echo $cep; ?></span>
+                <p>Cidade:</p><span><?php echo $cidade; ?></span>
+                <p>Estado:</p><span><?php echo $estado; ?></span>
+                <p>Complemento:</p><span><?php echo $complemento; ?></span>
+            </div>
+            <div class="botoes-cobranca">
+                <button type="button" class="alterar-dados" id="edit" onclick="location: './editar-cobranca.php'">Editar</button>
+            </div>
     </article>
 </section>
 
@@ -135,5 +132,6 @@
 </footer>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="/inDesign/js/active-header.js"></script>
+<script src="/inDesign/js/endereco.js"></script>
 </body>
 </html>

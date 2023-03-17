@@ -40,12 +40,6 @@
     </div>
 </header>
 
-<section class="header-login"> 
-    <a class="_2header_p" href="./session/login.php">Login</a>
-    <span class="_2header_p">|</span>
-    <a class="_2header_p" href="./session/login.php">Cadastre-se</a>
-</section>
-
 <section class="profile-container">
     <article class="box1">
         <div class="user">

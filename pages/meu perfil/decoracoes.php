@@ -1,3 +1,20 @@
+<?php
+    require '../session/conexao.php';
+    
+    session_start();
+    
+    if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
+        require '../session/conexao.php';
+        $nome = $_SESSION['usuario'][0];
+        $cpf = $_SESSION['usuario'][1];
+        $nasc = $_SESSION['usuario'][2];
+        $email = $_SESSION['usuario'][3];
+        $telefone = $_SESSION['usuario'][4];
+    }else{
+        header("location: ../session/login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,11 +26,11 @@
 </head>
 <body>
 <header>
-    <img src="/img/Wireframe PI 1.png" width="20%">
+    <img src="/inDesign/img/Wireframe PI 1.png" width="20%">
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
-    <a class="a_header active" href="./decoracoes.html">Perfil</a>
+    <a class="a_header active" href="./decoracoes.php">Perfil</a>
     <a class="a_header" href="#">Quiz</a>
     <div class="container">
         <form action="" class="search-bar">
@@ -23,33 +40,30 @@
     </div>
 </header>
 
-<section class="header-login"> 
-    <a class="_2header_p" href="./session/login.php">Login</a>
-    <span class="_2header_p">|</span>
-    <a class="_2header_p" href="./session/login.php">Cadastre-se</a>
-</section>
-
 <section class="profile-container">
     <article class="box1">
         <div class="user">
-            <img class="default-pfp" src="/img/default_pfp.png">
-            <h2 class="nome">Yuri gostoso sexo</h2>
+            <img class="default-pfp" src="/inDesign/img/default_pfp.png">
+            <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes">
-            <img src="/img/user avatar.svg">
+            <img src="/inDesign/img/user avatar.svg">
             <a href="./index.php">Meu perfil</a>
         </div>
         <div class="opcoes">
-            <img src="../../img/mini sofa roxo.svg">
-            <a href="./decoracoes.html" class="active">Minhas decorações</a>
+            <img src="/inDesign/img/mini sofa roxo.svg">
+            <a href="./decoracoes.php" class="active">Minhas decorações</a>
         </div>
         <div class="opcoes">
-            <img src="/img/moeda.svg">
-            <a href="./cobranca.html">Dados de cobrança</a>
+            <img src="/inDesign/img/moeda.svg">
+            <a href="./cobranca.php">Dados de cobrança</a>
         </div>
         <div class="opcoes cadeado">
-            <img src="/img/cadeado.svg">
-            <a href="./seguranca.html">Senha e segurança</a>
+            <img src="/inDesign/img/cadeado.svg">
+            <a href="./seguranca.php">Senha e segurança</a>
+        </div>
+        <div class="opcoes">
+            <a class="alterar-dados" href="../session/logout.php">Sair</a>
         </div>
     </article>
     <article class="box4">
@@ -100,7 +114,7 @@
                 <p>ID: 93248</p>
                 <div class="detalhes">
                     <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
+                    <img src="/inDesign/img/escritório.png" alt="">
                 </div>
                 <div class="avaliacao">
                     <h3>Sua avaliação:</h1>
@@ -116,7 +130,7 @@
                 <p>ID: 12847</p>
                 <div class="detalhes">
                     <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
+                    <img src="/inDesign/img/escritório.png" alt="">
                 </div>
                 <div class="avaliacao">
                     <h3>Sua avaliação:</h1>
@@ -158,7 +172,7 @@
         <article class="side">
             <h2>Precisa de ajuda?</h2>
             <div class="img-span">
-                <img class="zap" src="/img/logo_whats.png" width="18%">
+                <img class="zap" src="/inDesign/img/logo_whats.png" width="18%">
                 <span class="whats">(41)98736-9496</span>
             </div>
             <p class="horario">Disponível em horário comercial</p>

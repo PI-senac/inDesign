@@ -1,4 +1,4 @@
-const botao = document.querySelector('.alterar-dados');
+const botao = document.querySelector('#edit');
 const inputs = document.querySelectorAll('.formulario');
 const ceeep = document.querySelector('.cep')
 
@@ -6,8 +6,6 @@ botao.addEventListener('click', () => {
     inputs.forEach((inputs) => {
         inputs.disabled = false;
     });
-
-    botao.textContent = 'Salvar alterações'
 });
 
 ceeep.addEventListener("keypress", (e) => {
@@ -33,3 +31,13 @@ $(".cep").keyup(function(){
         }
     });
 });
+
+$('#edit').click(function() {
+    $(this).hide();
+    $('#save, #cancel').show();
+  });
+  
+  $('#cancel').click(function() {
+    $('#edit').show();
+    $('#save, #cancel').hide();
+  });

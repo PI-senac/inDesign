@@ -11,7 +11,7 @@
         $email = $_SESSION['usuario'][3];
         $telefone = $_SESSION['usuario'][4];
     }else{
-        echo "<script> location = '../session/login.php' </script>";
+        header("location: ../session/login.php");
     }
 ?>
 
@@ -40,12 +40,6 @@
     </div>
 </header>
 
-<section class="header-login"> 
-    <a class="_2header_p" href="./session/login.php">Login</a>
-    <span class="_2header_p">|</span>
-    <a class="_2header_p" href="./session/login.php">Cadastre-se</a>
-</section>
-
 <section class="profile-container">
     <article class="box1">
         <div class="user">
@@ -57,7 +51,7 @@
             <a href="./index.php" class="active">Área do decorador</a>
         </div>
         <div class="opcoes">
-            <img src="../../img/user avatar.svg">
+            <img src="/inDesign/img/user avatar.svg">
             <a href="./perfil.php">Meu perfil</a>
         </div>
         <div class="opcoes">
