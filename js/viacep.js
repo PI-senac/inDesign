@@ -1,14 +1,6 @@
-const botao = document.querySelector('.alterar-dados');
+const botao = document.querySelector('#edit');
 const inputs = document.querySelectorAll('.formulario');
 const ceeep = document.querySelector('.cep')
-
-botao.addEventListener('click', () => {
-    inputs.forEach((inputs) => {
-        inputs.disabled = false;
-    });
-
-    botao.textContent = 'Salvar alterações'
-});
 
 ceeep.addEventListener("keypress", (e) => {
     const onlyNumbers = /[0-9]|\./;
@@ -19,7 +11,7 @@ ceeep.addEventListener("keypress", (e) => {
       e.preventDefault();
       return;
     }
-  });
+});
 
 $(".cep").keyup(function(){
     $.ajax({
@@ -33,3 +25,13 @@ $(".cep").keyup(function(){
         }
     });
 });
+
+/* $('#edit').click(function() {
+    $(this).hide();
+    $('#save, #cancel').show();
+  });
+  
+  $('#cancel').click(function() {
+    $('#edit').show();
+    $('#save, #cancel').hide();
+  }); */

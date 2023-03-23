@@ -1,84 +1,77 @@
 @import url(./header-footer.css);
 
+:root{
+    --green: #C6F608;
+}
+
 #main_section_login {
     height: 500px;
     margin-top: 48px;
     margin-bottom: 90px;
     justify-content: space-evenly;
-    padding: 0px 100px 0px 100px;
+    padding: 0px 100px;
+    display: flex;
 }
 /* LOGIN */
 
 #login-container {
-    justify-content: center;
-    display: flex;
-    border: 1px solid #000;
-    box-shadow: 10px 12px #C6F608;
+    border: 1px solid var(--font-color);
+    box-shadow: 10px 12px var(--green);
     border-radius: 14px;
     background-color: #FFF;
     width: 18%;
-    
-}
-
-#login-container2 {
-    justify-content: center;
+    overflow: hidden;
 }
 
 .titulo_login_cadastro {
     font-size: 27px;
     text-align: center;
     margin-top: 23%;
-    font-weight: 500;
     margin-bottom: 17%;
 }
 
-#main_section_login {
-    display: flex;
-}
-
-#login_form1 {
+.login_form1 {
     margin-bottom: 25%;
     font-size: 20px;
     border-radius: 50px;
-}
-
-#login_form1 input {
-    height: 30px;
-    margin-top: 10px;
-    font-size: 20px;
-}
-
-#botao_login {
-    background-color: #C6F608;
-    width: 65%;
     text-align: center;
-    padding: 10px;
-    padding-top: 8px;
+}
+
+.login_form1 input {
+    font-size: 16px;
+    margin-right: 20px;
+    padding: .3rem .5rem;
+    border: 1px solid var(--font-color);
+    border-radius: 8px;
+    outline-color: var(--green);
+}
+
+.login_form1 span{
+    color: var(--green);
+    font-size: 14px;
+}
+
+.botao-login {
+    background-color: var(--green);
+    width: 30%;
+    padding: 8px 10px;
     border-radius: 5px;
-    color: #29374C;
+    color: var(--font-color);
     font-size: 18px;
-    font-weight: 500;
     transition: 0.3s ease;
+    border: none;
 }
 
-#botao_login:hover {
-   background-color: #E8E8E8;
-}
-
-#div_botao_entrar {
-    display: flex;
-    justify-content: center;
-}
-
-.asterisco {
-    color: red;
+.botao-login:hover {
+   background-color: var(--purple);
+   color: #FFF;
 }
 
 /* CADASTRO */
 
 #cadastro-container {
     overflow: hidden;
-    border: 1px solid #000;
+    border: 1px solid var(--font-color);
     box-shadow: 10px 12px var(--purple);
     border-radius: 14px;
     background-color: #FFF;
@@ -112,7 +105,6 @@
     font-size: 27px;
     text-align: center;
     margin: 8% 0 4% 0;
-    font-weight: 500;
     color: var(--font-color);
 }
 
@@ -126,19 +118,17 @@
     width: 30%;
     padding: 8px 10px;
     border-radius: 5px;
-    color: #E8E8E8;
+    color: #FFF;
     font-size: 18px;
-    font-weight: 500;
     transition: 0.3s ease;
     border: none;
 }
 
 .botao-cadastro:hover {
-   background-color: #C6F608;
+   background-color: var(--green);
    color: var(--font-color);
 }
 
 .inputs{
     margin-bottom: 1rem;
 }
-

@@ -1,3 +1,20 @@
+<?php
+    require '../session/conexao.php';
+    
+    session_start();
+    
+    if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
+        require '../session/conexao.php';
+        $nome = $_SESSION['usuario'][0];
+        $cpf = $_SESSION['usuario'][1];
+        $nasc = $_SESSION['usuario'][2];
+        $email = $_SESSION['usuario'][3];
+        $telefone = $_SESSION['usuario'][4];
+    }else{
+        header("location: ../session/login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,47 +26,44 @@
 </head>
 <body>
 <header>
-    <img src="/img/Wireframe PI 1.png" width="20%">
+    <img src="/inDesign/img/Wireframe PI 1.png" width="20%">
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
-    <a class="a_header active" href="./decoracoes.html">Perfil</a>
+    <a class="a_header active" href="./decoracoes.php">Perfil</a>
     <a class="a_header" href="#">Quiz</a>
     <div class="container">
         <form action="" class="search-bar">
             <input type="text" placeholder="Pesquise aqui" name="q">
-            <button type="submit"><img src="/img/lupa.png"></button>
+            <button type="submit"><img src="/inDesign/img/lupa.png"></button>
         </form>
     </div>
 </header>
 
-<section class="header-login"> 
-    <a class="_2header_p" href="./session/login.php">Login</a>
-    <span class="_2header_p">|</span>
-    <a class="_2header_p" href="./session/login.php">Cadastre-se</a>
-</section>
-
 <section class="profile-container">
     <article class="box1">
         <div class="user">
-            <img class="default-pfp" src="/img/default_pfp.png">
-            <h2 class="nome">Yuri gostoso sexo</h2>
-        </div>
-        <div class="opcoes">
-            <img src="/img/user avatar.svg">
-            <a href="./index.html">Meu perfil</a>
-        </div>
-        <div class="opcoes">
-            <img src="../../img/mini sofa roxo.svg">
-            <a href="./decoracoes.html" class="active">Minhas decorações</a>
-        </div>
-        <div class="opcoes">
-            <img src="/img/moeda.svg">
-            <a href="./cobranca.html">Dados de cobrança</a>
+            <img class="default-pfp" src="/inDesign/img/default_pfp.png">
+            <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes cadeado">
-            <img src="/img/cadeado.svg">
-            <a href="./seguranca.html">Senha e segurança</a>
+            <img src="/inDesign/img/mala.svg">
+            <a href="./index.php">Área do decorador</a>
+        </div>
+        <div class="opcoes">
+            <img src="/inDesign/img/user avatar.svg">
+            <a href="./perfil.php">Meu perfil</a>
+        </div>
+        <div class="opcoes">
+            <img src="/inDesign/img/mini sofa roxo.svg">
+            <a href="./decoracoes.php" class="active">Minhas decorações</a>
+        </div>
+        <div class="opcoes">
+            <img src="/inDesign/img/moeda.svg">
+            <a href="./recebimento.php">Dados de recebimento</a>
+        </div>
+        <div class="cadeado" style="margin-top: 2rem;">
+            <a class="alterar-dados" href="../session/logout.php">Sair</a>
         </div>
     </article>
     <article class="box4">
@@ -62,24 +76,30 @@
                 <h3>cômodo e estilo</h3>
                 <p>Data de início: 11/11/1111</p>
                 <p>Previsão para entrega: 22/22/2222</p>
-                <span>Decorador: </span><a href="#" class="decorador">Yuri sexy</a>
+                <span>Cliente: </span><a href="#" class="decorador">random feio</a>
                 <p>Valor: R$888888</p>
                 <p>ID: 24344</p>
                 <div class="detalhes">
-                    <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
+                    <div>
+                        <a href="#" class="botao-decorador">Editar projeto</a>
+                        <a href="#" class="botao-decorador">Chat com o cliente</a>
+                    </div>
+                    <img src="/inDesign/img/escritório.png" alt="">
                 </div>
             </div>
             <hr><div class="infos">
                 <h3>cômodo e estilo</h3>
                 <p>Data de início: 11/11/1111</p>
                 <p>Previsão para entrega: 22/22/2222</p>
-                <span>Decorador: </span><a href="#" class="decorador">Yuri sexy</a>
+                <span>Cliente: </span><a href="#" class="decorador">random feio</a>
                 <p>Valor: R$888888</p>
                 <p>ID: 24344</p>
                 <div class="detalhes">
-                    <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
+                    <div>
+                        <a href="#" class="botao-decorador">Editar projeto</a>
+                        <a href="#" class="botao-decorador">Chat com o cliente</a>
+                    </div>
+                    <img src="/inDesign/img/escritório.png" alt="">
                 </div>
             </div>
         </div>
@@ -95,32 +115,24 @@
                 <h3>cômodo e estilo</h3>
                 <p>Data de início: 11/11/1111</p>
                 <p>Data de entrega: 22/22/2222</p>
-                <span>Decorador: </span><a href="#" class="decorador">Yuri sexy</a>
+                <span>Cliente: </span><a href="#" class="decorador">random feio</a>
                 <p>Valor: R$888888</p>
                 <p>ID: 93248</p>
                 <div class="detalhes">
-                    <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
-                </div>
-                <div class="avaliacao">
-                    <h3>Sua avaliação:</h1>
-                    <img src="" alt="">
+                    <a href="#" class="botao-decorador">Chat com o cliente</a>
+                    <img src="/inDesign/img/escritório.png" alt="">
                 </div>
             </div>
             <hr><div class="infos-finalizada">
                 <h3>cômodo e estilo</h3>
                 <p>Data de início: 11/11/1111</p>
                 <p>Data de entrega: 22/22/2222</p>
-                <span>Decorador: </span><a href="#" class="decorador">Yuri sexy</a>
+                <span>Cliente: </span><a href="#" class="decorador">random feio</a>
                 <p>Valor: R$888888</p>
                 <p>ID: 12847</p>
                 <div class="detalhes">
-                    <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
-                </div>
-                <div class="avaliacao">
-                    <h3>Sua avaliação:</h1>
-                    <img src="" alt="">
+                    <a href="#" class="botao-decorador">Chat com o cliente</a>
+                    <img src="/inDesign/img/escritório.png" alt="">
                 </div>
             </div>
         </div>

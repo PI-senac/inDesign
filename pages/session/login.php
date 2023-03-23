@@ -17,7 +17,7 @@
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
-    <a class="a_header" href="../meu perfil/perfil.html">Perfil</a>
+    <a class="a_header" href="../meu perfil/index.php">Perfil</a>
     <a class="a_header" href="#">Quiz</a>
     <div class="container">
         <form action="" class="search-bar">
@@ -28,23 +28,24 @@
 </header>
 
 <section id="main_section_login">
-    <div id="login-container">
-        <div id="login-container2"> 
+    <form id="login-container" method="POST" action="./logar.php">
         <p class="titulo_login_cadastro">Login</p>
-            <div id="login_form1">
-            <label for="">E-mail<span>*</span>:</label><br>
-            <input type="text" size="20px"><br>
+            <div class="login_form1">
+                <div class="inputs">
+                    <label for="e-mail">E-mail<span>*</span>:</label><br>
+                    <input type="text" size="20px" id="e-mail" name="e-mail">
+                </div>
+
+                <div class="inputs">
+                    <label for="pswd">Senha<span>*</span>:</label><br>
+                    <input type="password" size="20px" id="pswd" name="pswd">
+                </div>
             </div>
 
-            <div id="login_form1">
-            <label for="">Senha<span>*</span>:</label><br>
-            <input type="password" size="20px" >
-            </div>
-        <div id="div_botao_entrar"><a id="botao_login" href="#">Entrar</a></div>
-
+        <div class="botao">
+        <input type="submit" value="Entrar" class="botao-login">
         </div>
-
-    </div>
+    </form>
 
 <form method="POST" id="cadastro-container">
     <p class="titulo_cadastro_cadastro">Cadastre-se</p>
@@ -52,44 +53,46 @@
         <div class="inputs">
             <label for="nome">Nome completo<span>*</span>:</label><br>
             <input id="nome" name="nome" type="text" size="20px"><br>
-            <span class="alerta-nome"></span>
+            <span class="alerta-nome alertas"></span>
         </div>
 
         <div class="inputs">
             <label for="cpf">CPF<span>*</span>:</label><br>
             <input id="cpf" name="cpf" type="text" size="10px">
-            <span class="alerta-cpf"></span>
+            <span class="alerta-cpf alertas"></span>
         </div>
 
         <div class="inputs">
             <label for="email">E-mail<span>*</span>: </label><br>
             <input id="email" name="email" type="text" size="25px">
-            <span class="alerta-email"></span>
+            <span class="alerta-email alertas"></span>
         </div>
 
         <div class="inputs">
             <label for="nascimento">Data de Nascimento<span>*</span>: </label><br>
             <input id="nascimento" name="nascimento" type="date" id="data_nascimento_input">
-            <span class="alerta-nascimento"></span>
+            <span class="alerta-nascimento alertas"></span>
         </div>
         
         <div class="inputs">
             <label for="telefone">Telefone Celular<span>*</span>:</label><br>
             <input id="telefone" name="telefone" type="text">
-            <span class="alerta-tel"></span>
+            <span class="alerta-tel alertas"></span>
         </div>
         
         <div class="inputs">
             <label for="senha">Senha<span>*</span>: </label><br>
             <input id="senha" name="senha" type="password" size="15px">
-            <span class="alerta-pswd"></span>
+            <span class="alerta-pswd alertas"></span>
         </div>
 
         <div class="inputs">
             <label for="conf-senha">Confirmar Senha<span>*</span>: </label><br>
             <input id="conf-senha" name="conf-senha" type="password">
         </div>
+
     </div>
+    <span class="alerta-user alertas"></span>
 
     <div class="botao">
         <input type="submit" value="Cadastre-se" class="botao-cadastro">
@@ -120,22 +123,22 @@
         <article class="side">
             <h2>Vem com a gente!</h2>
             <div class="icons">
-                <a href="https://br.pinterest.com/" target="_blank"><img class="img_footer" src="/img/pin.png"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img class="img_footer" src="/img/instagram.png"></a>
-                <a href="https://pt-br.facebook.com/" target="_blank"><img class="img_footer" src="/img/face.png"></a>
+                <a href="https://br.pinterest.com/" target="_blank"><img class="img_footer" src="/inDesign/img/pin.png"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img class="img_footer" src="/inDesign/img/instagram.png"></a>
+                <a href="https://pt-br.facebook.com/" target="_blank"><img class="img_footer" src="/inDesign/img/face.png"></a>
             </div>
         </article>
 
         <article class="side">
             <h2>Precisa de ajuda?</h2>
             <div class="img-span">
-                <img class="zap" src="/img/logo_whats.png" width="18%">
+                <img class="zap" src="/inDesign/img/logo_whats.png" width="18%">
                 <span class="whats">(41)98736-9496</span>
             </div>
             <p class="horario">Disponível em horário comercial</p>
         </article>
     </section>
 </footer>
-<script src="/inDesign/js/fetch-cadastro.js"></script>
+<script src="/inDesign/js/fetch.js"></script>
 </body>
 </html>
