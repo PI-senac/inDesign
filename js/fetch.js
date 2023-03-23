@@ -1,10 +1,7 @@
 const formulario = document.querySelector('#cadastro-container');
-const alertas = document.querySelectorAll('.alertas');
 
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    alertas.forEach(alerta => alerta.addEventListener('keyup', tiraAlerta));
 
     if(document.querySelector('#nome').value === ''){
         document.querySelector('.alerta-nome').innerHTML = 'o campo nome é obrigatório';
@@ -32,6 +29,6 @@ formulario.addEventListener('submit', async (e) => {
     }
 });
 
-function tiraAlerta(){
-    alertas.innerHTML = '';
-}
+/* async function editarUsuario(id){
+    
+} */

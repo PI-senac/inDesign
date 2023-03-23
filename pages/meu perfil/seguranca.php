@@ -21,7 +21,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/inDesign/styles/perfil.css">
+    <link rel="stylesheet" href="/inDesign/styles/seguranca.css">
     <title>Meu perfil</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
-    <a class="a_header active" href="./index.php">Perfil</a>
+    <a class="a_header active" href="./seguranca.php">Perfil</a>
     <a class="a_header" href="#">Quiz</a>
     <div class="container">
         <form action="" class="search-bar">
@@ -46,13 +46,9 @@
             <img class="default-pfp" src="/inDesign/img/default_pfp.png">
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
-        <div class="opcoes cadeado">
-            <img src="/inDesign/img/mala.svg">
-            <a href="./index.php">Área do decorador</a>
-        </div>
         <div class="opcoes">
-            <img src="/inDesign/img/user avatar roxo.svg">
-            <a href="./perfil.php" class="active">Meu perfil</a>
+            <img src="/inDesign/img/user avatar.svg">
+            <a href="./index.php">Meu perfil</a>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/mini sofa.svg">
@@ -60,38 +56,33 @@
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/moeda.svg">
-            <a href="./recebimento.php">Dados de recebimento</a>
+            <a href="./cobranca.php">Dados de cobrança</a>
         </div>
-        <div class="cadeado" style="margin-top: 2rem;">
+        <div class="opcoes cadeado">
+            <img src="/inDesign/img/cadeado roxo.svg">
+            <a href="./seguranca.php" class="active">Senha e segurança</a>
+        </div>
+        <div class="opcoes">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
         </div>
     </article>
-    <article class="box2">
-        <h1 class="meu-perfil">Meu perfil</h1>
-        <div class="opcoes cadeado">
-            <img src="/inDesign/img/cpf icon.svg">
-            <p><?php echo $cpf; ?></p>
-        </div><hr>
-        <div class="opcoes">
-            <img src="/inDesign/img/bolo.svg">
-            <p><?php echo $nasc; ?></p>
-        </div><hr>
-        <div class="opcoes">
-            <img src="/inDesign/img/email.svg">
-            <p><?php echo $email; ?></p>
-        </div><hr>
-        <div class="opcoes">
-            <img src="/inDesign/img/celular.svg" class="celular">
-            <p><?php echo $telefone; ?></p>
-        </div><hr>
-        <button class="alterar-dados">Altere seus dados</button>
-    </article>
-    <article class="box3">
-        <h1 class="meu-estilo">Meu estilo</h1>
-        <img src="/inDesign/img/default_pfp.png">
-        <h1 class="estilo">estilo</h1>
-        <p>Não é preciso estar no campo para poder adicionar um toque rústico ao décor da casa. A seleção de ambientes abaixo prova que o estilo, se bem dosado, é capaz de trazer aconchego a qualquer espaço. A dica é combinar elementos de toque natural ou estruturas expostas com peças ou revestimentos de estética oposta, criando, assim, um contraste interessante para a madeira na decoração.
-        </p>
+    <article class="box7">
+        <h1>Redefinição de senha</h1>
+        <form class="form-senha">
+            <div class="input-senha">
+                <label>Senha atual</label><span class="obrigatorio">*</span><br>
+                <input type="text" class="senha"required>
+            </div>
+            <div class="input-senha">
+                <label>Nova senha</label><span class="obrigatorio">*</span><br>
+                <input type="text" class="estado" required>
+            </div>
+            <div class="input-senha">
+                <label>Confirme a nova senha</label><span class="obrigatorio">*</span><br>
+                <input type="text" class="cidade" required>
+            </div>
+        </form>
+        <button class="alterar-dados">Alterar senha</button>
     </article>
 </section>
 
@@ -134,6 +125,6 @@
     </section>
 </footer>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="/inDesign/js/active-header.js"></script>
+<script src="/js/active-header.js"></script>
 </body>
 </html>

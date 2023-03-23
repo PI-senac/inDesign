@@ -1,17 +1,18 @@
 <?php
-    require '../session/conexao.php';
+    require_once '../session/conexao.php';
     
     session_start();
     
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
-        require '../session/conexao.php';
+
         $nome = $_SESSION['usuario'][0];
         $cpf = $_SESSION['usuario'][1];
         $nasc = $_SESSION['usuario'][2];
         $email = $_SESSION['usuario'][3];
         $telefone = $_SESSION['usuario'][4];
     }else{
-        echo "<script> location = '../session/login.php' </script>";
+        header("location: ../session/login.php");
+        // SELECT DATE_FORMAT(BirthDate, "%d %m %Y") FROM Employees;
     }
 ?>
 
@@ -26,7 +27,7 @@
 </head>
 <body>
 <header>
-    <img src="/img/Wireframe PI 1.png" width="20%">
+    <img src="/inDesign/img/Wireframe PI 1.png" width="20%">
     <a class="a_header" href="../index.html">Início</a>
     <a class="a_header" href="#">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
@@ -35,16 +36,10 @@
     <div class="container">
         <form action="" class="search-bar">
             <input type="text" placeholder="Pesquise aqui" name="q">
-            <button type="submit"><img src="/img/lupa.png"></button>
+            <button type="submit"><img src="/inDesign/img/lupa.png"></button>
         </form>
     </div>
 </header>
-
-<section class="header-login"> 
-    <a class="_2header_p" href="./session/login.php">Login</a>
-    <span class="_2header_p">|</span>
-    <a class="_2header_p" href="./session/login.php">Cadastre-se</a>
-</section>
 
 <section class="profile-container">
     <article class="box1">
@@ -53,20 +48,20 @@
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes">
-            <img src="../../img/user avatar roxo.svg">
-            <a href="./index.html" class="active">Meu perfil</a>
+            <img src="/inDesign/img/user avatar roxo.svg">
+            <a href="./index.php" class="active">Meu perfil</a>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/mini sofa.svg">
-            <a href="./decoracoes.html">Minhas decorações</a>
+            <a href="./decoracoes.php">Minhas decorações</a>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/moeda.svg">
-            <a href="./cobranca.html">Dados de cobrança</a>
+            <a href="./cobranca.php">Dados de cobrança</a>
         </div>
         <div class="opcoes cadeado">
             <img src="/inDesign/img/cadeado.svg">
-            <a href="./seguranca.html">Senha e segurança</a>
+            <a href="./seguranca.php">Senha e segurança</a>
         </div>
         <div class="opcoes">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
@@ -90,7 +85,7 @@
             <img src="/inDesign/img/celular.svg" class="celular">
             <p><?php echo $telefone; ?></p>
         </div><hr>
-        <button class="alterar-dados">Altere seus dados</button>
+        <button class="alterar-dados edit" onclick="location = './editar-dados.php'">Editar</button>
     </article>
     <article class="box3">
         <h1 class="meu-estilo">Meu estilo</h1>

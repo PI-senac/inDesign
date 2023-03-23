@@ -27,7 +27,6 @@
     font-size: 27px;
     text-align: center;
     margin-top: 23%;
-    font-weight: 500;
     margin-bottom: 17%;
 }
 
@@ -59,7 +58,6 @@
     border-radius: 5px;
     color: var(--font-color);
     font-size: 18px;
-    font-weight: 500;
     transition: 0.3s ease;
     border: none;
 }
@@ -107,7 +105,6 @@
     font-size: 27px;
     text-align: center;
     margin: 8% 0 4% 0;
-    font-weight: 500;
     color: var(--font-color);
 }
 
@@ -123,7 +120,6 @@
     border-radius: 5px;
     color: #FFF;
     font-size: 18px;
-    font-weight: 500;
     transition: 0.3s ease;
     border: none;
 }
