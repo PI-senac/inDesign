@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profissionais_2</title>
-    <link rel="stylesheet" href="../../styles/Profissionais2.css">
-    <a href="profissionais.html"></a>
+    <title>Conheça os profissionais</title>
+    <link rel="stylesheet" href="/inDesign/styles/profissionais.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
 <header>
-        <img src="img/Wireframe PI 1.png" width="20%">
-        <a class="inicio" href="#">Início</a>
-        <a class="a_header" href="Profissionais.html">Profissionais</a>
-        <a class="a_header" href="#">Sobre</a>
-        <a class="a_header" href="#">Perfil</a>
+        <img src="/inDesign/img/Wireframe PI 1.png" width="20%">
+        <a class="a_header" href="../index.html">Início</a>
+        <a class="a_header active" href="./profissionais.php">Profissionais</a>
+        <a class="a_header" href="../sobre.html">Sobre</a>
+        <a class="a_header" href="../meu perfil/index.php">Perfil</a>
         <a class="a_header" href="#">Quiz</a>
         <div class="container">
             <form action="" class="search-bar">
                 <input type="text" placeholder="Pesquise aqui..." name="q">
-                <button type="submit"><img src="img/lupa.png"></button>
+                <button type="submit"><img src="/inDesign/img/lupa.png"></button>
             </form>
         </div>
 </header>
-<section id="_2header"> 
+<section class="header-login"> 
     <a class="_2header_p" href="#">Login</a>
     <a class="_2header_p">|</a>
     <a class="_2header_p" href="#">Cadastre-se</a>
@@ -31,41 +31,31 @@
 
 <!-- Body - Taci -->
     <section>
-        <p id="paragrafo_estilo3">Aqui estão os profissionais especializados no seu estilo!</p>
-        <div class="alinha_estilo">
-            <div id="alinha1">
-                <p id="paragrafo_estilo4">Seu estilo: 
-                    <span id="cor_azul">Rústico</span>
-                </p>
+        <h1 class="titulo_estilo">Aqui estão os profissionais especializados no seu estilo!</h1>
+            <div class="subtitulos">
+                <div class="seu-estilo">
+                    <p class="parag">Seu estilo:</p>
+                    <span>Rústico</span>
+                </div>
+                <span></span>
+                <div class="ordenar">
+                    <p class="parag">Ordenar por:</p>
+                        <select size="1">
+                            <option value="">Selecione o estilo</option>
+                            <option value="1">Melhor Avaliação</option>
+                            <option value="2">Contemporâneo</option>
+                            <option value="3">Rústico</option>
+                            <option value="4">Clássico</option>
+                            <option value="5">Moderno</option>
+                        </select>
+                </div>
             </div>
-            <div class="alinha_estilo2">
-                <div id="alinha2">
-                    <p id="paragrafo_estilo5">Ordenar por:                          
-                        <div class="alinha2">
-                        <form id="form1">
-                            <div>
-                                <div>  
-                                    <select class="alinha-select">
-                                        <option value="">Selecione o estilo</option>
-                                        <option value="">Melhor Avaliação</option>
-                                        <option value="contemporaneo">Contemporâneo</option>
-                                        <option value="rustico">Rústico</option>
-                                        <option value="classico">Clássico</option>
-                                        <option value="moderno">Moderno</option>
-                                    </select>
-                                </div>    
-                            </div>
-                        </form>
-                    </p>
-                </div>               
-            </div>        
-        </div>     
     </section>
     <section class="container_flex">
         <fieldset class="bordas_prof">
             <div class="container">
                 <div class="flex_float">
-                     <div><img src="img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
+                     <div><img src="/inDesign/img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
                      <p id="paragrafo_estilo6">Ada Lovelace</p>     
                 </div>  
             </div>
@@ -77,7 +67,7 @@
         <fieldset class="bordas_prof">
                 <div class="container">
                     <div class="flex_float">
-                        <div><img src="img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
+                        <div><img src="/inDesign/img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
                         <p id="paragrafo_estilo6">Ada Lovelace</p>
                     </div>  
                 </div>
@@ -89,7 +79,7 @@
         <fieldset class="bordas_prof">
             <div class="container">
                 <div class="flex_float">
-                    <div><img src="img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
+                    <div><img src="/inDesign/img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
                     <p id="paragrafo_estilo6">Ada Lovelace</p>
                 </div>  
             </div>
@@ -122,21 +112,23 @@
             <article class="side">
                 <h2>Vem com a gente!</h2>
                 <div class="icons">
-                    <a href="https://br.pinterest.com/" target="_blank"><img class="img_footer" src="/img/pin.png"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img class="img_footer" src="/img/instagram.png"></a>
-                    <a href="https://pt-br.facebook.com/" target="_blank"><img class="img_footer" src="/img/face.png"></a>
+                    <a href="https://br.pinterest.com/" target="_blank"><img class="img_footer" src="/inDesign/img/pin.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="img_footer" src="/inDesign/img/instagram.png"></a>
+                    <a href="https://pt-br.facebook.com/" target="_blank"><img class="img_footer" src="/inDesign/img/face.png"></a>
                 </div>
             </article>
 
             <article class="side">
                 <h2>Precisa de ajuda?</h2>
                 <div class="img-span">
-                    <img class="zap" src="/img/logo_whats.png" width="18%">
+                    <img class="zap" src="/inDesign/img/logo_whats.png" width="18%">
                     <span class="whats">(41)98736-9496</span>
                 </div>
                 <p class="horario">Disponível em horário comercial</p>
             </article>
         </section>
 </footer>
+<script src="/inDesign/js/select.js"></script>
+<script src="/inDesign/js/active-header.js"></script>
 </body>
 </html>     

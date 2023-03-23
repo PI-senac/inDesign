@@ -3,6 +3,8 @@
     --font-color: rgba(41, 55, 76, 1);
     --purple: rgba(95, 48, 249, 1);
     --bg-color: rgba(232, 232, 232, 1);
+    --transparent-blue: #29374CCC;
+    --green: #C6F608;
 }
 
 /* HEADER */
@@ -11,12 +13,11 @@
     margin: 0px;
     font-family: var(--font-family);
     text-decoration: none;
-
 }
 
 body {
     background-size: cover;
-    background: url(/img/Desktop\ -\ 1.png) repeat fixed center;
+    background: url(/inDesign/img/Desktop\ -\ 1.png) repeat fixed center;
 }
 
 header{ 
@@ -28,16 +29,15 @@ header{
     align-items: center;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-}
-
 .a_header {
     transition: 0.3s ease;
     text-decoration: none;
     color: var(--font-color);
     font-size: 20px;
+}
+
+a{
+    color: var(--font-color);
 }
 
 .active{

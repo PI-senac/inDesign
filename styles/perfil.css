@@ -1,14 +1,5 @@
 @import url(./header-footer.css);
 
-:root{
-    --font-family: 'Barlow', sans-serif;
-    --font-color: #29374C;
-    --purple: #5f30f9;
-    --bg-color: #e8e8e8;
-    --transparent-blue: #29374CCC;
-    --green: #C6F608; 
-}
-
 *{
     color: var(--font-color);
 }

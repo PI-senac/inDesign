@@ -1,0 +1,51 @@
+@import url(header-footer.css);
+
+.titulo_estilo{
+    font-size: 25px;
+    text-align: center;
+    color: var(--font-color);
+    letter-spacing: .5mm;
+    font-weight: 400;
+    margin-top: 70px;
+}
+
+.flex_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5rem 0;
+    gap: 10rem;
+}
+    
+.hexa p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+.hexa a:hover{
+    color: var(--purple);
+}
+
+#contemporaneo, #rustico, #classico, #moderno{
+    width: 200px;
+}
+
+.teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 7rem;
+}
+
+.botao_estilo{
+    padding: 1.5rem 6rem;
+    background: var(--green);
+    border-radius: 88px;
+    font-size: 20px;
+    font-weight: 400;
+}
+    

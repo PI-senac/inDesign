@@ -28,7 +28,7 @@
 <header>
     <img src="/inDesign/img/Wireframe PI 1.png" width="20%">
     <a class="a_header" href="../index.html">Início</a>
-    <a class="a_header" href="#">Profissionais</a>
+    <a class="a_header" href="../profissionais/index.html">Profissionais</a>
     <a class="a_header" href="../sobre.html">Sobre</a>
     <a class="a_header active" href="./decoracoes.php">Perfil</a>
     <a class="a_header" href="#">Quiz</a>

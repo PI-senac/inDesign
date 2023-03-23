@@ -8,7 +8,7 @@
         
         if($query->rowCount()){
             $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
-            $conexao = new mysqli('localhost', 'root', '', 'teste_indesign');
+            $conexao = new mysqli('localhost', 'root', '', 'cadastro');
             
             session_start();
             $_SESSION['usuario'] = array($user['nome'], $user['cpf'], $user['nascimento'], $user['email'], $user['telefone'], $user['cep'], $user['estado'], $user['cidade'], $user['rua'], $user['numero'], $user['complemento']);
@@ -28,7 +28,6 @@
                // var_dump($consultaId);
                header("location: ../meu perfil/index.php");
             }
-
         }else{
             header("location: ./login.php");
         }
