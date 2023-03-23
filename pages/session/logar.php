@@ -8,10 +8,10 @@
         
         if($query->rowCount()){
             $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
-            $conexao = new mysqli('localhost', 'root', '', 'cadastro');
+            $conexao = new mysqli('localhost', 'root', '', 'teste_indesign');
             
             session_start();
-            $_SESSION['usuario'] = array($user['nome'], $user['cpf'], $user['nascimento'], $user['email'], $user['telefone'], $user['cep'], $user['estado'], $user['cidade'], $user['endereço'], $user['numero'], $user['complemento']);
+            $_SESSION['usuario'] = array($user['nome'], $user['cpf'], $user['nascimento'], $user['email'], $user['telefone'], $user['cep'], $user['estado'], $user['cidade'], $user['rua'], $user['numero'], $user['complemento']);
             
             $consultaId =  "SELECT decorador FROM users where email = '$email'";
             $result = $conexao->query($consultaId);

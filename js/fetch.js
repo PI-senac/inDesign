@@ -28,3 +28,7 @@ formulario.addEventListener('submit', async (e) => {
         }
     }
 });
+
+/* async function editarUsuario(id){
+    
+} */

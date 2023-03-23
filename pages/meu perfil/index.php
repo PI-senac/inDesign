@@ -4,7 +4,7 @@
     session_start();
     
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
-        require '../session/conexao.php';
+
         $nome = $_SESSION['usuario'][0];
         $cpf = $_SESSION['usuario'][1];
         $nasc = $_SESSION['usuario'][2];
@@ -12,6 +12,7 @@
         $telefone = $_SESSION['usuario'][4];
     }else{
         header("location: ../session/login.php");
+        // SELECT DATE_FORMAT(BirthDate, "%d %m %Y") FROM Employees;
     }
 ?>
 
@@ -84,7 +85,7 @@
             <img src="/inDesign/img/celular.svg" class="celular">
             <p><?php echo $telefone; ?></p>
         </div><hr>
-        <button class="alterar-dados">Altere seus dados</button>
+        <button class="alterar-dados edit" onclick="location = './editar-dados.php'">Editar</button>
     </article>
     <article class="box3">
         <h1 class="meu-estilo">Meu estilo</h1>

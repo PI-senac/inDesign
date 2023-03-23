@@ -5,6 +5,10 @@
     
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
         $nome = $_SESSION['usuario'][0];
+        $cpf = $_SESSION['usuario'][1];
+        $nasc = $_SESSION['usuario'][2];
+        $email = $_SESSION['usuario'][3];
+        $telefone = $_SESSION['usuario'][4];
         $cep = $_SESSION['usuario'][5];
         $estado = $_SESSION['usuario'][6];
         $cidade = $_SESSION['usuario'][7];
@@ -13,15 +17,6 @@
         $complemento = $_SESSION['usuario'][10];
     }else{
         header("location: ../session/login.php");
-    }
-
-    if(!empty($_GET['id'])){
-    $id = $_GET['id'];
-
-    $select = "SELECT * FROM users WHERE id=$id";
-    $result = $conn->query($select);
-
-    var_dump($result);
     }
 ?>
 
@@ -79,15 +74,15 @@
     <article class="box6">
         <h1>Dados de cobrança</h1>
             <div class="enderecos">
-                <p>Endereço:</p><span><?php echo $endereco; ?></span>
-                <p>Número:</p><span><?php echo $numero; ?></span>
-                <p>CEP:</p><span><?php echo $cep; ?></span>
-                <p>Cidade:</p><span><?php echo $cidade; ?></span>
-                <p>Estado:</p><span><?php echo $estado; ?></span>
-                <p>Complemento:</p><span><?php echo $complemento; ?></span>
+                <p>Endereço:</p><span><?php echo $endereco; ?></span><br>
+                <p>Número:</p><span><?php echo $numero; ?></span><br>
+                <p>CEP:</p><span><?php echo $cep; ?></span><br>
+                <p>Cidade:</p><span><?php echo $cidade; ?></span><br>
+                <p>Estado:</p><span><?php echo $estado; ?></span><br>
+                <p>Complemento:</p><span><?php echo $complemento; ?></span><br>
             </div>
             <div class="botoes-cobranca">
-                <button type="button" class="alterar-dados" id="edit" onclick="location: './editar-cobranca.php'">Editar</button>
+                <button type="button" class="alterar-dados edit" onclick="location = './editar-dados.php'">Editar</button>
             </div>
     </article>
 </section>
@@ -132,6 +127,5 @@
 </footer>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="/inDesign/js/active-header.js"></script>
-<script src="/inDesign/js/endereco.js"></script>
 </body>
 </html>

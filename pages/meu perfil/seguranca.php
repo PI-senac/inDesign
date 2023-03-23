@@ -126,6 +126,5 @@
 </footer>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="/js/active-header.js"></script>
-<script src="/js/endereco.js"></script>
 </body>
 </html>

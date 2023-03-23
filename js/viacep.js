@@ -2,12 +2,6 @@ const botao = document.querySelector('#edit');
 const inputs = document.querySelectorAll('.formulario');
 const ceeep = document.querySelector('.cep')
 
-botao.addEventListener('click', () => {
-    inputs.forEach((inputs) => {
-        inputs.disabled = false;
-    });
-});
-
 ceeep.addEventListener("keypress", (e) => {
     const onlyNumbers = /[0-9]|\./;
     const key = String.fromCharCode(e.keyCode);
@@ -17,7 +11,7 @@ ceeep.addEventListener("keypress", (e) => {
       e.preventDefault();
       return;
     }
-  });
+});
 
 $(".cep").keyup(function(){
     $.ajax({
@@ -32,7 +26,7 @@ $(".cep").keyup(function(){
     });
 });
 
-$('#edit').click(function() {
+/* $('#edit').click(function() {
     $(this).hide();
     $('#save, #cancel').show();
   });
@@ -40,4 +34,4 @@ $('#edit').click(function() {
   $('#cancel').click(function() {
     $('#edit').show();
     $('#save, #cancel').hide();
-  });
+  }); */

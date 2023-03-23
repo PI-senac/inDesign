@@ -1,0 +1,99 @@
+@import url(./header-footer.css);
+@import url(./cobranca.css);
+
+.edit-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid var(--font-color);
+    margin: 5.6rem 20rem;
+    padding: 1rem;
+    box-shadow: 10px 12px var(--purple);
+    border-radius: 14px;
+    background-color: #FFF;
+    height: 95vh;
+    overflow: hidden;
+}
+
+.edit-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.edit-inputs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.input input{
+    padding: .5rem;
+    border-radius: 8px;
+    border: 1px solid var(--transparent-blue);
+    outline-color: var(--purple);
+}
+
+.password-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.personal-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.address-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.obrigatorio{
+    color: var(--purple);
+}
+
+#cancel{
+    background-color: transparent;
+    border: 1px solid var(--green);
+    color: var(--green);
+    letter-spacing: .3mm;
+    margin: 4rem .5rem 0 0;
+    padding: 10px;    
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+#cancel, #save:hover{
+    cursor: pointer;
+}
+
+#save{
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    color: var(--font-color);
+    letter-spacing: .3mm;
+    margin-top: 4rem;
+    padding: 10px 20px;    
+    border-radius: 5px;
+    font-size: 13px; 
+}
+
+.span-required{
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin: 5px 0 0 1px;
+}

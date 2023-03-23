@@ -139,6 +139,6 @@
         </article>
     </section>
 </footer>
-<script src="/inDesign/js/fetch-cadastro.js"></script>
+<script src="/inDesign/js/fetch.js"></script>
 </body>
 </html>
