@@ -1,12 +1,17 @@
 <?php
-    require_once '../session/conexao.php';
+    require '../session/conexao.php';
+    
     session_start();
-
-    if(isset($_SESSION['id']) && isset($_SESSION['nome'])){
-        $_SESSION = "SELECT * FROM users WHERE id =':id' LIMIT 1";
-
+    
+    if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
+        require '../session/conexao.php';
+        $nome = $_SESSION['usuario'][0];
+        $cpf = $_SESSION['usuario'][1];
+        $nasc = $_SESSION['usuario'][2];
+        $email = $_SESSION['usuario'][3];
+        $telefone = $_SESSION['usuario'][4];
     }else{
-        echo "<script>location = '../session/login.php'</script>";
+        echo "<script> location = '../session/login.php' </script>";
     }
 ?>
 
@@ -45,7 +50,7 @@
     <article class="box1">
         <div class="user">
             <img class="default-pfp" src="/inDesign/img/default_pfp.png">
-            <h2 class="nome"><?php echo $_SESSION['nome']; ?></h2>
+            <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes">
             <img src="../../img/user avatar roxo.svg">
@@ -71,19 +76,19 @@
         <h1 class="meu-perfil">Meu perfil</h1>
         <div class="opcoes cadeado">
             <img src="/inDesign/img/cpf icon.svg">
-            <p>aaaaaa</p>
+            <p><?php echo $cpf; ?></p>
         </div><hr>
         <div class="opcoes">
             <img src="/inDesign/img/bolo.svg">
-            <p>aaaaa</p>
+            <p><?php echo $nasc; ?></p>
         </div><hr>
         <div class="opcoes">
             <img src="/inDesign/img/email.svg">
-            <p>aaaaaa</p>
+            <p><?php echo $email; ?></p>
         </div><hr>
         <div class="opcoes">
             <img src="/inDesign/img/celular.svg" class="celular">
-            <p>aaaaa</p>
+            <p><?php echo $telefone; ?></p>
         </div><hr>
         <button class="alterar-dados">Altere seus dados</button>
     </article>

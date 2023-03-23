@@ -6,6 +6,7 @@
     --purple: #5f30f9;
     --bg-color: #e8e8e8;
     --transparent-blue: #29374CCC;
+    --green: #C6F608; 
 }
 
 *{
@@ -21,7 +22,7 @@
     border: 1px solid #000;
     margin: 5.6rem 20rem;
     padding: 1rem 0;
-    box-shadow: 10px 12px #C6F608;
+    box-shadow: 10px 12px var(--green);
     border-radius: 14px;
     background-color: #FFF;
     min-height: 57vh;
