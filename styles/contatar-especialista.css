@@ -13,12 +13,31 @@
     border-radius: 14px;
     background-color: #FFF;
     overflow: hidden;
-    height: 60vh;
+    height: 56vh;
     color: var(--font-color);
     margin: 5rem 20rem;
 }
 
 .direita{
-    width: 820px;
-    height: 800px;
+    width: 880px;
+}
+
+.slide-img{
+    height: 600px;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 8rem;
+}
+
+.foto-decorador{
+    width: 150px;
+}
+
+.esquerda p{
+    letter-spacing: .3mm;
 }
