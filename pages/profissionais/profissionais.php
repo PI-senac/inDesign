@@ -51,43 +51,49 @@
                 </div>
             </div>
     </section>
-    <section class="container_flex">
-        <fieldset class="bordas_prof">
-            <div class="container">
-                <div class="flex_float">
-                     <div><img src="/inDesign/img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
-                     <p id="paragrafo_estilo6">Ada Lovelace</p>     
-                </div>  
+    <section class="decoradores">
+        <article class="container-decorador">
+            <div class="superior">
+                <img src="/inDesign/img/user avatar.svg" alt="">
+                <h3 class="nome-decorador">Yuri Martins</h3>
+                <img src="/inDesign/img/4 estrelas.svg" alt="">
             </div>
-            <div>
-                <p class="paragrafo_estilo7">Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. <br> Repudiandae soluta  sint libero, <br> quia earum placeat culpa iusto <br> animi. Vel autem sint ipsam <br>molestiae a aut ducimus, <br> id vitae qui labore!<p>
-            </div> 
-            <button type="submit" value="enviar" id="botao_estilo"><a href="#"><p id="titulo_estilo3">Descubra seu estilo</p></a></button>       
-        </fieldset>   
-        <fieldset class="bordas_prof">
-                <div class="container">
-                    <div class="flex_float">
-                        <div><img src="/inDesign/img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
-                        <p id="paragrafo_estilo6">Ada Lovelace</p>
-                    </div>  
-                </div>
-                <div>
-                    <p class="paragrafo_estilo7">Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. <br> Repudiandae soluta  sint libero, <br> quia earum placeat culpa iusto <br> animi. Vel autem sint ipsam <br>molestiae a aut ducimus, <br> id vitae qui labore!<p>
-                </div>
-                <button type="submit" value="enviar" id="botao_estilo"><a href="#"><p id="titulo_estilo3">Descubra seu estilo</p></a></button>
-        </fieldset>
-        <fieldset class="bordas_prof">
-            <div class="container">
-                <div class="flex_float">
-                    <div><img src="/inDesign/img/ada_lovelace.webp" alt="Ada Lovelace" title="Ada Lovelace" id="ada"></div>
-                    <p id="paragrafo_estilo6">Ada Lovelace</p>
-                </div>  
+            <div class="inferior">
+                <span>"Faça o que ama e não trabalhará um dia sequer"</span>
+                <p class="infos-decorador">Designer desde: 2018</p>
+                <p class="infos-decorador">Especialidades: Estilo Rústico</p>
+                <p class="infos-decorador">Decorações realizadas: 54</p>
             </div>
-            <div >
-                <p class="paragrafo_estilo7">Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. <br> Repudiandae soluta  sint libero, <br> quia earum placeat culpa iusto <br> animi. Vel autem sint ipsam <br>molestiae a aut ducimus, <br> id vitae qui labore!<p>
+            <a href="./contatar-profissional.html" class="botao">Saiba mais</a>
+        </article>
+        <article class="container-decorador">
+        <div class="superior">
+                <img src="/inDesign/img/user avatar.svg" alt="">
+                <h3 class="nome-decorador">Rafael Serafim</h3>
+                <img src="/inDesign/img/4 estrelas.svg" alt="">
             </div>
-            <button type="submit" value="enviar" id="botao_estilo"><a href="#"><p id="titulo_estilo3">Descubra seu estilo</p></a></button>
-        </fieldset>
+            <div class="inferior">
+                <span class="frase">"Faça o que ama e não trabalhará um dia sequer"</span>
+                <p>Designer desde: 2018</p>
+                <p>Especialidades: Estilo Rústico</p>
+                <p>Decorações realizadas: 54</p>
+            </div>
+            <a href="./contatar-profissional.html" class="botao">Saiba mais</a>
+        </article>
+        <article class="container-decorador">
+        <div class="superior">
+                <img src="/inDesign/img/user avatar.svg" alt="">
+                <h3 class="nome-decorador">Samille Andrade</h3>
+                <img src="/inDesign/img/4 estrelas.svg" alt="">
+            </div>
+            <div class="inferior">
+                <span>"Faça o que ama e não trabalhará um dia sequer"</span>
+                <p>Designer desde: 2018</p>
+                <p>Especialidades: Estilo Rústico</p>
+                <p>Decorações realizadas: 54</p>
+            </div>
+            <a href="./contatar-profissional.html" class="botao">Saiba mais</a>
+        </article>
     </section>
 <!-- Fecha Body - Taci -->    
 <footer>
