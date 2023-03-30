@@ -9,7 +9,7 @@ $result_usuario->bindParam(':email', $dados['email'], PDO::PARAM_STR);
 $result_usuario->execute();
 
     if (($result_usuario) and ($result_usuario->rowCount() != 0)) {
-        $retorna = ['erro' => true, 'msg' => "<span class='alerta-user'>e-mail já cadastrado</span>"];
+        $retorna = ['erro' => true, 'msg' => "<span style='margin: 3rem 2rem; color: #f00; background-color: #F4998D; padding: .5rem 1rem; border-radius: 5px'>e-mail já cadastrado</span>"];
     }else{
         $query_usuario = "INSERT INTO users (nome, cpf, nascimento, email, telefone, senha) VALUES (:nome, :cpf, :nascimento, :email, :telefone, :senha)";
 
