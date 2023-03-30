@@ -132,3 +132,9 @@
 .inputs{
     margin-bottom: 1rem;
 }
+
+.span-required{
+    color: red !important;
+    display: none;
+    font-size: 12px !important;
+}

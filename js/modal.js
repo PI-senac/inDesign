@@ -17,8 +17,3 @@ function modal(){
 }
 
 modal();
-
-/* document.querySelector('.editar-infos').addEventListener('submit', (e) => {
-    e.preventDefault();
-    modal();
-}); */

@@ -33,12 +33,14 @@
             <div class="login_form1">
                 <div class="inputs">
                     <label for="e-mail">E-mail<span>*</span>:</label><br>
-                    <input type="text" size="20px" id="e-mail" name="e-mail" autofocus>
+                    <input type="text" size="20px" id="e-mail" name="e-mail" autofocus><br>
+                    <span class="aviso-e"></span>
                 </div>
 
                 <div class="inputs">
                     <label for="pswd">Senha<span>*</span>:</label><br>
-                    <input type="password" size="20px" id="pswd" name="pswd">
+                    <input type="password" size="20px" id="pswd" name="pswd"><br>
+                    <span class="aviso-s"></span>
                 </div>
             </div>
 
@@ -52,50 +54,51 @@
     <div class="cadastro_form1">
         <div class="inputs">
             <label for="nome">Nome completo<span>*</span>:</label><br>
-            <input id="nome" name="nome" type="text" size="20px"><br>
-            <span class="alerta-nome alertas"></span>
+            <input class="nome-cad required" id="nome" name="nome" type="text" size="20px"><br>
+            <span class="span-required">O nome precisa ter pelo menos 2 caracteres</span>
         </div>
 
         <div class="inputs">
             <label for="cpf">CPF<span>*</span>:</label><br>
-            <input id="cpf" name="cpf" type="text" size="10px">
-            <span class="alerta-cpf alertas"></span>
+            <input class="cpf required" id="cpf" name="cpf" type="text" size="10px">
+            <span class="span-required">CPF inválido</span>
         </div>
 
         <div class="inputs">
             <label for="email">E-mail<span>*</span>: </label><br>
-            <input id="email" name="email" type="text" size="25px">
-            <span class="alerta-email alertas"></span>
+            <input class="email-cad required" id="email" name="email" type="text" size="25px">
+            <span class="span-required">E-mail inválido</span>
         </div>
 
         <div class="inputs">
             <label for="nascimento">Data de Nascimento<span>*</span>: </label><br>
-            <input id="nascimento" name="nascimento" type="date" id="data_nascimento_input">
-            <span class="alerta-nascimento alertas"></span>
+            <input class="nasc required" id="nascimento" name="nascimento" type="date" id="data_nascimento_input">
+            <span class="span-required">Você deve ser maior de 18 anos</span>
         </div>
         
         <div class="inputs">
             <label for="telefone">Telefone Celular<span>*</span>:</label><br>
-            <input id="telefone" name="telefone" type="text">
-            <span class="alerta-tel alertas"></span>
+            <input class="tel required" id="telefone" name="telefone" type="text">
+            <span class="span-required">Digite um número válido</span>
         </div>
         
         <div class="inputs">
             <label for="senha">Senha<span>*</span>: </label><br>
-            <input id="senha" name="senha" type="password" size="15px">
-            <span class="alerta-pswd alertas"></span>
+            <input class="pswd required" id="senha" name="senha" type="password" size="15px">
+            <span class="span-required">A senha deve ter pelo menos 8 caracteres</span>
         </div>
 
         <div class="inputs">
             <label for="conf-senha">Confirmar Senha<span>*</span>: </label><br>
-            <input id="conf-senha" name="conf-senha" type="password">
+            <input class="conf-pswd required" id="conf-senha" name="conf-senha" type="password"> 
+            <span class="span-required">As senhas não coincidem</span>
         </div>
 
     </div>
     <span class="alerta-user alertas"></span>
 
     <div class="botao">
-        <input type="submit" value="Cadastre-se" class="botao-cadastro">
+        <button type="submit" class="botao-cadastro">Cadastre-se</button>
     </div>
 </form>
 
@@ -139,6 +142,8 @@
         </article>
     </section>
 </footer>
-<script src="/inDesign/js/cad-fetch.js"></script>
+<script src="/inDesign/js/validate-login.js"></script>
+<script type="module" src="/inDesign/js/cad-fetch.js"></script>
+<script type="module" src="/inDesign/js/validacoes.js"></script>
 </body>
 </html>
