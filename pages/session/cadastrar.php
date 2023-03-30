@@ -2,7 +2,6 @@
 require_once './conexao.php';
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$tableName = 'users';
 
 $query_usuario_pes = "SELECT id FROM users WHERE email=:email LIMIT 1";
 $result_usuario = $conn->prepare($query_usuario_pes);
@@ -32,24 +31,4 @@ $result_usuario->execute();
     }
     
     echo json_encode($retorna);
-    /*     $nome = "";
-        $cpf = "";
-        $nascimento = "";
-        $email = "";
-        $telefone = "";
-        $senha = "";
-      
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-          $nome =  $_POST["nome"];
-          $cpf = $_POST["cpf"];
-          $nascimento = $_POST["nascimento"];
-          $email = $_POST["email"];
-          $telefone = $_POST["telefone"];
-          $senha = $_POST["senha"];
-        }else{
-            echo 'nao deu certo';
-        }
-    
-        $query_usuario = "INSERT INTO users (nome, cpf, nascimento, email, telefone, senha) VALUES ('$nome', '$cpf', '$nascimento', '$email', '$telefone', '$senha')";
-        $result = $conn->query($query_usuario); */
-    ?>
+?>

@@ -5,11 +5,9 @@
     
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
         require '../session/conexao.php';
-        $nome = $_SESSION['usuario'][0];
-        $cpf = $_SESSION['usuario'][1];
-        $nasc = $_SESSION['usuario'][2];
-        $email = $_SESSION['usuario'][3];
-        $telefone = $_SESSION['usuario'][4];
+        $id = $_SESSION['usuario'][0];
+        $nome = $_SESSION['usuario'][1];
+        $foto = $_SESSION['usuario'][12];
     }else{
         header("location: ../session/login.php");
     }
@@ -43,20 +41,24 @@
 <section class="profile-container">
     <article class="box1">
         <div class="user">
-            <img class="default-pfp" src="/inDesign/img/default_pfp.png">
+        <?php if ((!empty($foto)) and (!file_exists("/inDesign/pages/edit/pfp/$id/$foto"))) {
+            echo "<img src='/inDesign/pages/edit/pfp/$id/$foto' width='128' height='128' style='border-radius: 80%'>";
+        } else {
+            echo "<img src='/inDesign/img/default_pfp.png' width='128'>";
+        } ?>
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/user avatar.svg">
-            <a href="./index.php">Meu perfil</a>
+            <a href="/inDesign/pages/meu perfil/index.php">Meu perfil</a>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/mini sofa.svg">
-            <a href="./decoracoes.php">Minhas decorações</a>
+            <a href="/inDesign/pages/meu perfil/decoracoes.php">Minhas decorações</a>
         </div>
         <div class="opcoes">
             <img src="/inDesign/img/moeda.svg">
-            <a href="./cobranca.php">Dados de cobrança</a>
+            <a href="/inDesign/pages/meu perfil/cobranca.php">Dados de cobrança</a>
         </div>
         <div class="opcoes cadeado">
             <img src="/inDesign/img/cadeado roxo.svg">

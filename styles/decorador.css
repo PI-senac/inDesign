@@ -53,3 +53,12 @@
     gap: 2rem;
     color: var(--font-color);
 }
+
+.botoes-decorador{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}

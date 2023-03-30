@@ -2,17 +2,19 @@
     require_once '../session/conexao.php';
     
     session_start();
+    ob_start();
     
-    if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
+     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
 
-        $nome = $_SESSION['usuario'][0];
-        $cpf = $_SESSION['usuario'][1];
-        $nasc = $_SESSION['usuario'][2];
-        $email = $_SESSION['usuario'][3];
-        $telefone = $_SESSION['usuario'][4];
+        $id = $_SESSION['usuario'][0];
+        $nome = $_SESSION['usuario'][1];
+        $cpf = $_SESSION['usuario'][2];
+        $nasc = $_SESSION['usuario'][3];
+        $email = $_SESSION['usuario'][4];
+        $telefone = $_SESSION['usuario'][5];
+        $foto = $_SESSION['usuario'][12];
     }else{
         header("location: ../session/login.php");
-        // SELECT DATE_FORMAT(BirthDate, "%d %m %Y") FROM Employees;
     }
 ?>
 
@@ -44,7 +46,11 @@
 <section class="profile-container">
     <article class="box1">
         <div class="user">
-            <img class="default-pfp" src="/inDesign/img/default_pfp.png">
+        <?php if ((!empty($foto)) and (!file_exists("/inDesign/pages/edit/pfp/$id/$foto"))) {
+            echo "<img src='/inDesign/pages/edit/pfp/$id/$foto' width='128' height='128' style='border-radius: 80%'>";
+        } else {
+            echo "<img src='/inDesign/img/default_pfp.png' width='128'>";
+        } ?>
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes">
@@ -61,7 +67,7 @@
         </div>
         <div class="opcoes cadeado">
             <img src="/inDesign/img/cadeado.svg">
-            <a href="./seguranca.php">Senha e segurança</a>
+            <a href="/inDesign/pages/edit/seguranca.php">Senha e segurança</a>
         </div>
         <div class="opcoes">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
@@ -71,11 +77,27 @@
         <h1 class="meu-perfil">Meu perfil</h1>
         <div class="opcoes cadeado">
             <img src="/inDesign/img/cpf icon.svg">
-            <p><?php echo $cpf; ?></p>
+            <p><?php 
+                function formatCnpjCpf($cpf)
+                {
+                  $CPF_LENGTH = 11;
+                  $cnpj_cpf = preg_replace("/\D/", '', $cpf);
+                  
+                  if (strlen($cnpj_cpf) === $CPF_LENGTH) {
+                    return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $cnpj_cpf);
+                  } 
+                  
+                  return preg_replace("/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/", "\$1.\$2.\$3/\$4-\$5", $cnpj_cpf);
+                }
+                echo formatCnpjCpf($cpf); ?></p>
         </div><hr>
         <div class="opcoes">
             <img src="/inDesign/img/bolo.svg">
-            <p><?php echo $nasc; ?></p>
+            <p><?php
+                $nasc = strtotime($nasc);
+                $nascTime = date('d/m/Y', $nasc);
+                echo $nascTime;
+            ?></p>
         </div><hr>
         <div class="opcoes">
             <img src="/inDesign/img/email.svg">
@@ -83,9 +105,16 @@
         </div><hr>
         <div class="opcoes">
             <img src="/inDesign/img/celular.svg" class="celular">
-            <p><?php echo $telefone; ?></p>
+            <p><?php 
+                function formataTelefone($telefone){
+                    $formata = substr($telefone, 0, 2);
+                    $formata_2 = substr($telefone, 3, 5);
+                    $formata_3 = substr($telefone, 4, 4);
+                    return "(".$formata.") " . $formata_2 . "-". $formata_3;
+                 }
+                echo formataTelefone($telefone); ?></p>
         </div><hr>
-        <button class="alterar-dados edit" onclick="location = './editar-dados.php'">Editar</button>
+        <button class="alterar-dados edit" onclick="location = '/inDesign/pages/edit/editar-infos.php'">Editar</button>
     </article>
     <article class="box3">
         <h1 class="meu-estilo">Meu estilo</h1>

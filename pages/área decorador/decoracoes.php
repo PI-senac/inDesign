@@ -5,11 +5,9 @@
     
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
         require '../session/conexao.php';
-        $nome = $_SESSION['usuario'][0];
-        $cpf = $_SESSION['usuario'][1];
-        $nasc = $_SESSION['usuario'][2];
-        $email = $_SESSION['usuario'][3];
-        $telefone = $_SESSION['usuario'][4];
+        $id = $_SESSION['usuario'][0];
+        $nome = $_SESSION['usuario'][1];
+        $foto = $_SESSION['usuario'][12];
     }else{
         header("location: ../session/login.php");
     }
@@ -43,7 +41,11 @@
 <section class="profile-container">
     <article class="box1">
         <div class="user">
-            <img class="default-pfp" src="/inDesign/img/default_pfp.png">
+        <?php if ((!empty($foto)) and (!file_exists("/inDesign/pages/edit/pfp/$id/$foto"))) {
+            echo "<img src='/inDesign/pages/edit/pfp/$id/$foto' width='128' height='128' style='border-radius: 100%'>";
+        } else {
+            echo "<img src='/inDesign/img/default_pfp.png' width='128'>";
+        } ?>
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes cadeado">
@@ -62,7 +64,7 @@
             <img src="/inDesign/img/moeda.svg">
             <a href="./recebimento.php">Dados de recebimento</a>
         </div>
-        <div class="cadeado" style="margin-top: 2rem;">
+        <div class="opcoes">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
         </div>
     </article>
@@ -73,31 +75,33 @@
         </div>
         <div class="decoracoes-andamento">
             <hr><div class="infos">
-                <h3>cômodo e estilo</h3>
+                <h3 class="comodo">cômodo e estilo</h3>
                 <p>Data de início: 11/11/1111</p>
                 <p>Previsão para entrega: 22/22/2222</p>
-                <span>Cliente: </span><a href="#" class="decorador">random feio</a>
+                <span>Cliente: </span><a href="#" class="decorador">Ana Júlia Pelacini</a>
                 <p>Valor: R$888888</p>
                 <p>ID: 24344</p>
                 <div class="detalhes">
-                    <div>
+                    <div class="botoes-decorador">
                         <a href="#" class="botao-decorador">Editar projeto</a>
-                        <a href="#" class="botao-decorador">Chat com o cliente</a>
+                        <a href="#" class="botao-decorador">Chat com o cliente</a><br>
+                        <a href="" class="botao-decorador" style="background-color: var(--purple); color: #fff;">Finalizar decoração</a>
                     </div>
                     <img src="/inDesign/img/escritório.png" alt="">
                 </div>
             </div>
             <hr><div class="infos">
-                <h3>cômodo e estilo</h3>
+                <h3 class="comodo">cômodo e estilo</h3>
                 <p>Data de início: 11/11/1111</p>
                 <p>Previsão para entrega: 22/22/2222</p>
-                <span>Cliente: </span><a href="#" class="decorador">random feio</a>
+                <span>Cliente: </span><a href="#" class="decorador">Lucas Esquetini</a>
                 <p>Valor: R$888888</p>
                 <p>ID: 24344</p>
                 <div class="detalhes">
-                    <div>
+                    <div class="botoes-decorador">
                         <a href="#" class="botao-decorador">Editar projeto</a>
                         <a href="#" class="botao-decorador">Chat com o cliente</a>
+                        <a href="#" class="botao-decorador" style="background-color: var(--purple); color: #fff;">Finalizar decoração</a>
                     </div>
                     <img src="/inDesign/img/escritório.png" alt="">
                 </div>
@@ -112,7 +116,7 @@
         </div>
         <div class="decoracoes-andamento finished">
             <hr><div class="infos-finalizada">
-                <h3>cômodo e estilo</h3>
+                <h3 class="comodo">cômodo e estilo</h3>
                 <p>Data de início: 11/11/1111</p>
                 <p>Data de entrega: 22/22/2222</p>
                 <span>Cliente: </span><a href="#" class="decorador">random feio</a>
@@ -124,7 +128,7 @@
                 </div>
             </div>
             <hr><div class="infos-finalizada">
-                <h3>cômodo e estilo</h3>
+                <h3 class="comodo">cômodo e estilo</h3>
                 <p>Data de início: 11/11/1111</p>
                 <p>Data de entrega: 22/22/2222</p>
                 <span>Cliente: </span><a href="#" class="decorador">random feio</a>
@@ -178,7 +182,7 @@
     </section>
 </footer>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="/js/active-header.js"></script>
-<script src="/js/sem-decoracao.js"></script>
+<script src="/inDesign/js/active-header.js"></script>
+<script src="/inDesign/js/sem-decoracao.js"></script>
 </body>
 </html>

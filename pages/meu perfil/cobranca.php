@@ -1,20 +1,20 @@
 <?php
+    session_start();
+    ob_start();
+    
     require_once '../session/conexao.php';
     
-    session_start();
-    
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
-        $nome = $_SESSION['usuario'][0];
-        $cpf = $_SESSION['usuario'][1];
-        $nasc = $_SESSION['usuario'][2];
-        $email = $_SESSION['usuario'][3];
-        $telefone = $_SESSION['usuario'][4];
-        $cep = $_SESSION['usuario'][5];
-        $estado = $_SESSION['usuario'][6];
-        $cidade = $_SESSION['usuario'][7];
-        $endereco = $_SESSION['usuario'][8];
-        $numero = $_SESSION['usuario'][9];
-        $complemento = $_SESSION['usuario'][10];
+
+        $id = $_SESSION['usuario'][0];
+        $nome = $_SESSION['usuario'][1];
+        $endereco = $_SESSION['usuario'][6];
+        $numero = $_SESSION['usuario'][7];
+        $cep = $_SESSION['usuario'][8];
+        $estado = $_SESSION['usuario'][9];
+        $cidade = $_SESSION['usuario'][10];
+        $complemento = $_SESSION['usuario'][11];
+        $foto = $_SESSION['usuario'][12];
     }else{
         header("location: ../session/login.php");
     }
@@ -27,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/inDesign/styles/cobranca.css">
-    <title>Meu perfil</title>
+    <title>Dados de cobrança</title>
 </head>
 <body>
 <header>
@@ -48,7 +48,11 @@
 <section class="profile-container">
     <article class="box1">
         <div class="user">
-            <img class="default-pfp" src="/inDesign/img/default_pfp.png">
+        <?php if ((!empty($foto)) and (!file_exists("/inDesign/pages/edit/pfp/$id/$foto"))) {
+            echo "<img src='/inDesign/pages/edit/pfp/$id/$foto' width='128' height='128' style='border-radius: 80%'>";
+        } else {
+            echo "<img src='/inDesign/img/default_pfp.png' width='128'>";
+        } ?>
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes">
@@ -65,7 +69,7 @@
         </div>
         <div class="opcoes cadeado">
             <img src="/inDesign/img/cadeado.svg">
-            <a href="./seguranca.php">Senha e segurança</a>
+            <a href="/inDesign/pages/edit/seguranca.php">Senha e segurança</a>
         </div>
         <div class="opcoes">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
@@ -74,15 +78,15 @@
     <article class="box6">
         <h1>Dados de cobrança</h1>
             <div class="enderecos">
-                <p>Endereço:</p><span><?php echo $endereco; ?></span><br>
-                <p>Número:</p><span><?php echo $numero; ?></span><br>
-                <p>CEP:</p><span><?php echo $cep; ?></span><br>
-                <p>Cidade:</p><span><?php echo $cidade; ?></span><br>
-                <p>Estado:</p><span><?php echo $estado; ?></span><br>
-                <p>Complemento:</p><span><?php echo $complemento; ?></span><br>
+                <p>Endereço:</p><span><?php echo $endereco; ?></span><br><br>
+                <p>Número:</p><span><?php echo $numero; ?></span><br><br>
+                <p>CEP:</p><span><?php echo $cep; ?></span><br><br>
+                <p>Cidade:</p><span><?php echo $cidade; ?></span><br><br>
+                <p>Estado:</p><span><?php echo $estado; ?></span><br><br>
+                <p>Complemento:</p><span><?php echo $complemento; ?></span><br><br>
             </div>
             <div class="botoes-cobranca">
-                <button type="button" class="alterar-dados edit" onclick="location = './editar-dados.php'">Editar</button>
+                <button type="button" class="edit" onclick="location = '/inDesign/pages/edit/editar-endereco.php'">Editar</button>
             </div>
     </article>
 </section>

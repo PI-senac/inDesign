@@ -4,12 +4,9 @@
     session_start();
     
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
-        require '../session/conexao.php';
-        $nome = $_SESSION['usuario'][0];
-        $cpf = $_SESSION['usuario'][1];
-        $nasc = $_SESSION['usuario'][2];
-        $email = $_SESSION['usuario'][3];
-        $telefone = $_SESSION['usuario'][4];
+        $id = $_SESSION['usuario'][0];
+        $nome = $_SESSION['usuario'][1];
+        $foto = $_SESSION['usuario'][12];
     }else{
         header("location: ../session/login.php");
     }
@@ -22,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/inDesign/styles/decorador.css">
-    <title>Meu perfil</title>
+    <title>Área do decorador</title>
 </head>
 <body>
 <header>
@@ -43,7 +40,11 @@
 <section class="profile-container">
     <article class="box1">
         <div class="user">
-            <img class="default-pfp" src="/inDesign/img/default_pfp.png">
+        <?php if ((!empty($foto)) and (!file_exists("/inDesign/pages/edit/pfp/$id/$foto"))) {
+            echo "<img src='/inDesign/pages/edit/pfp/$id/$foto' width='128' height='128' style='border-radius: 80%'>";
+        } else {
+            echo "<img src='/inDesign/img/default_pfp.png' width='128'>";
+        } ?>
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes cadeado">
@@ -62,7 +63,7 @@
             <img src="/inDesign/img/moeda.svg">
             <a href="./recebimento.php">Dados de recebimento</a>
         </div>
-        <div class="cadeado" style="margin-top: 2rem;">
+        <div class="opcoes">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
         </div>
     </article>
@@ -81,7 +82,7 @@
             <div class="opcoes-decorador">
                 <h3>Minhas decorações</h3>
                 <span>Confira suas decorações, finalizadas ou não.</span>
-                <a class="botao-decorador" href="">Minhas decorações</a>
+                <a class="botao-decorador" href="./decoracoes.php">Minhas decorações</a>
             </div>
             <div class="opcoes-decorador">
                 <h3>Redefinir senha</h3>

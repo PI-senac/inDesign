@@ -5,11 +5,9 @@
     
     if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
         require '../session/conexao.php';
-        $nome = $_SESSION['usuario'][0];
-        $cpf = $_SESSION['usuario'][1];
-        $nasc = $_SESSION['usuario'][2];
-        $email = $_SESSION['usuario'][3];
-        $telefone = $_SESSION['usuario'][4];
+        $id = $_SESSION['usuario'][0];
+        $nome = $_SESSION['usuario'][1];
+        $foto = $_SESSION['usuario'][12];
     }else{
         header("location: ../session/login.php");
     }
@@ -43,7 +41,11 @@
 <section class="profile-container">
     <article class="box1">
         <div class="user">
-            <img class="default-pfp" src="/inDesign/img/default_pfp.png">
+        <?php if ((!empty($foto)) and (!file_exists("/inDesign/pages/edit/pfp/$id/$foto"))) {
+            echo "<img src='/inDesign/pages/edit/pfp/$id/$foto' width='128' height='128' style='border-radius: 80%'>";
+        } else {
+            echo "<img src='/inDesign/img/default_pfp.png' width='128'>";
+        } ?>
             <h2 class="nome"><?php echo $nome; ?></h2>
         </div>
         <div class="opcoes">
@@ -60,7 +62,7 @@
         </div>
         <div class="opcoes cadeado">
             <img src="/inDesign/img/cadeado.svg">
-            <a href="./seguranca.php">Senha e segurança</a>
+            <a href="/inDesign/pages/edit/seguranca.php">Senha e segurança</a>
         </div>
         <div class="opcoes">
             <a class="alterar-dados" href="../session/logout.php">Sair</a>
@@ -81,7 +83,7 @@
                 <p>ID: 24344</p>
                 <div class="detalhes">
                     <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
+                    <img src="/inDesign/img/escritório.png" alt="">
                 </div>
             </div>
             <hr><div class="infos">
@@ -93,7 +95,7 @@
                 <p>ID: 24344</p>
                 <div class="detalhes">
                     <a href="#" class="chat">Chat com o decorador</a>
-                    <img src="../img/escritório.png" alt="">
+                    <img src="/inDesign/img/escritório.png" alt="">
                 </div>
             </div>
         </div>
@@ -118,7 +120,7 @@
                 </div>
                 <div class="avaliacao">
                     <h3>Sua avaliação:</h1>
-                    <img src="" alt="">
+                    <img src="/inDesign/img/4 estrelas.svg" alt="">
                 </div>
             </div>
             <hr><div class="infos-finalizada">
@@ -134,7 +136,7 @@
                 </div>
                 <div class="avaliacao">
                     <h3>Sua avaliação:</h1>
-                    <img src="" alt="">
+                    <img src="/inDesign/img/4 estrelas.svg" alt="">
                 </div>
             </div>
         </div>

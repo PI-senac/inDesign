@@ -29,7 +29,7 @@
     height: 52vh;
 }
 
-h3{
+.comodo{
     text-align: center;
     font-size: 22px;
     margin-bottom: 1rem;
@@ -113,4 +113,8 @@ h3{
     flex-direction: column;
     width: 100%;
     align-items: center;
+}
+
+.avaliacao{
+    text-align: center;
 }

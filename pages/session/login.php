@@ -33,7 +33,7 @@
             <div class="login_form1">
                 <div class="inputs">
                     <label for="e-mail">E-mail<span>*</span>:</label><br>
-                    <input type="text" size="20px" id="e-mail" name="e-mail">
+                    <input type="text" size="20px" id="e-mail" name="e-mail" autofocus>
                 </div>
 
                 <div class="inputs">
@@ -139,6 +139,6 @@
         </article>
     </section>
 </footer>
-<script src="/inDesign/js/fetch.js"></script>
+<script src="/inDesign/js/cad-fetch.js"></script>
 </body>
 </html>
